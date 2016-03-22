@@ -19,3 +19,6 @@ G:\Mateus\2° Módulo\PC I\TCM\TCM\obj\Debug\TCM.FrmCadastroFunc.resources
 G:\Mateus\2° Módulo\PC I\TCM\TCM\obj\Debug\TCM.FrmPrincipal.resources
 G:\Mateus\2° Módulo\PC I\TCM\TCM\obj\Debug\TCM.Properties.Resources.resources
 G:\Mateus\2° Módulo\PC I\TCM\TCM\obj\Debug\TCM.csproj.GenerateResource.Cache
+C:\Users\mateu\Desktop\Pendrive\2° Módulo\PC I\TCM\TCM\bin\Debug\TCM.exe.config
+C:\Users\mateu\Desktop\Pendrive\2° Módulo\PC I\TCM\TCM\obj\Debug\TCM.exe
+C:\Users\mateu\Desktop\Pendrive\2° Módulo\PC I\TCM\TCM\obj\Debug\TCM.pdb
