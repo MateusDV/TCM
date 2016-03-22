@@ -50,7 +50,7 @@ namespace TCM
         //botao cancelar
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Application.Exit(); //Sai da aplicacao
         }
     }
 }
