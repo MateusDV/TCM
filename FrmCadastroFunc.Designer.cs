@@ -59,6 +59,7 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -239,7 +240,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(199, 9);
+            this.label12.Location = new System.Drawing.Point(217, 9);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(183, 20);
             this.label12.TabIndex = 24;
@@ -319,12 +320,23 @@
             this.maskedTextBox5.Size = new System.Drawing.Size(86, 20);
             this.maskedTextBox5.TabIndex = 35;
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(512, 285);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 36;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // FrmCadastroFunc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(613, 335);
+            this.ClientSize = new System.Drawing.Size(1000, 620);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.maskedTextBox5);
             this.Controls.Add(this.maskedTextBox4);
             this.Controls.Add(this.label15);
@@ -356,7 +368,9 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmCadastroFunc";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Funcionário";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -396,5 +410,6 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.MaskedTextBox maskedTextBox4;
         private System.Windows.Forms.MaskedTextBox maskedTextBox5;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }
