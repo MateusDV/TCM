@@ -43,7 +43,7 @@ namespace TCM
             }
             else
             {
-                MessageBox.Show("Usuario ou senha inválidos");
+                MessageBox.Show("Usuário ou senha incorretos");
             }
         }
 

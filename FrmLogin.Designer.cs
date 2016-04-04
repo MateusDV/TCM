@@ -41,7 +41,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(184, 42);
+            this.label1.Location = new System.Drawing.Point(182, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 0;
@@ -49,14 +49,14 @@
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(230, 39);
+            this.txtUser.Location = new System.Drawing.Point(228, 36);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(100, 20);
             this.txtUser.TabIndex = 1;
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(230, 75);
+            this.txtPass.Location = new System.Drawing.Point(228, 72);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '•';
             this.txtPass.Size = new System.Drawing.Size(100, 20);
@@ -65,7 +65,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(189, 78);
+            this.label2.Location = new System.Drawing.Point(187, 75);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 2;
@@ -81,7 +81,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(184, 113);
+            this.btnLogin.Location = new System.Drawing.Point(182, 113);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(75, 23);
             this.btnLogin.TabIndex = 5;
@@ -91,7 +91,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(265, 113);
+            this.btnCancel.Location = new System.Drawing.Point(263, 113);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 6;
@@ -112,6 +112,7 @@
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
