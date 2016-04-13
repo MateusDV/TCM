@@ -42,7 +42,8 @@ namespace TCM
             else
             {
                 FrmCadastroFunc frmCadastroF = new FrmCadastroFunc();
-                frmCadastroF.ShowDialog();
+				frmCadastroF.Show();
+				frmCadastroF.MdiParent = this;
             }
         }
     }
