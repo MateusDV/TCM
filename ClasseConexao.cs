@@ -16,7 +16,7 @@ namespace TCM
         {
             try
             {
-                String strConexao = "Password=etesp; Persist Security Info=True; User ID=aluno; Initial Catalog=Teste; Data Source=" + Environment.MachineName;
+                String strConexao = "Password=12345; Persist Security Info=True; User ID=sa; Initial Catalog=AALVES; Data Source=" + Environment.MachineName;
                 conexao.ConnectionString = strConexao;
                 conexao.Open();
                 return conexao;
@@ -32,7 +32,7 @@ namespace TCM
         {
             try
             {
-                if ((conexao.State == ConnectionState.Open))
+                if (conexao.State == ConnectionState.Open)
                 {
                     conexao.Close();
                     conexao.Dispose();

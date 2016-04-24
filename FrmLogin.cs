@@ -39,7 +39,6 @@ namespace TCM
                 this.Hide();
                 FrmPrincipal frmPrincipal = new FrmPrincipal();
                 frmPrincipal.Show();
-                //this.Close();
             }
             else
             {

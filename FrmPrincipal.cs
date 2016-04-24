@@ -29,8 +29,10 @@ namespace TCM
             this.Hide();
             FrmLogin frmLogin = new FrmLogin();
             frmLogin.ShowDialog();
-        }
+			this.Dispose();
+		}
 
+		//MENU FUNCIONÁRIO--------------------------------------------------------------
         //botao cadastrar
         private void cadastrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -46,5 +48,37 @@ namespace TCM
 				frmCadastroF.MdiParent = this;
             }
         }
-    }
+
+		//MENU ALUNO---------------------------------------------------------------------------------
+		//botao caddastrar
+		private void cadastrarMatricularToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			//nao permite duas instancias do mesmo formulario
+			if (Application.OpenForms.OfType<FrmCadastroAluno>().Count() > 0)
+			{
+				MessageBox.Show("O formulário já está aberto");
+			}
+			else
+			{
+				FrmCadastroAluno frmCadastroA = new FrmCadastroAluno();
+				frmCadastroA.Show();
+				frmCadastroA.MdiParent = this;
+			}
+		}
+
+		private void cadastrarToolStripMenuItem1_Click(object sender, EventArgs e)
+		{
+			//nao permite duas instancias do mesmo formulario
+			if (Application.OpenForms.OfType<FrmCadastroProf>().Count() > 0)
+			{
+				MessageBox.Show("O formulário já está aberto");
+			}
+			else
+			{
+				FrmCadastroProf frmCadastroP = new FrmCadastroProf();
+				frmCadastroP.Show();
+				frmCadastroP.MdiParent = this;
+			}
+		}
+	}
 }
