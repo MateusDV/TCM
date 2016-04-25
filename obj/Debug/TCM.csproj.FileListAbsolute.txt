@@ -34,3 +34,4 @@ C:\Users\mateu\Desktop\Pendrive\2° Módulo\PC I\TCM\TCM\obj\Debug\TCM.Propertie
 C:\Users\mateu\Desktop\Pendrive\2° Módulo\PC I\TCM\TCM\obj\Debug\TCM.csproj.GenerateResource.Cache
 C:\Users\mateu\Desktop\Pendrive\2° Módulo\PC I\TCM\TCM\obj\Debug\TCM.exe
 C:\Users\mateu\Desktop\Pendrive\2° Módulo\PC I\TCM\TCM\obj\Debug\TCM.pdb
+C:\Users\mateu\Desktop\Pendrive\2° Módulo\PC I\TCM\TCM\obj\Debug\TCM.csprojResolveAssemblyReference.cache

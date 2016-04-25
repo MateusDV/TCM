@@ -166,11 +166,13 @@
 			// 
 			// txtTelefone
 			// 
+			this.txtTelefone.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
 			this.txtTelefone.Location = new System.Drawing.Point(90, 312);
 			this.txtTelefone.Mask = "(00) 0000-0000";
 			this.txtTelefone.Name = "txtTelefone";
 			this.txtTelefone.Size = new System.Drawing.Size(84, 20);
 			this.txtTelefone.TabIndex = 18;
+			this.txtTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
 			// 
 			// txtCidade
 			// 
@@ -250,6 +252,7 @@
 			this.rdbB.Size = new System.Drawing.Size(57, 17);
 			this.rdbB.TabIndex = 27;
 			this.rdbB.TabStop = true;
+			this.rdbB.Tag = "1";
 			this.rdbB.Text = "Básico";
 			this.rdbB.UseVisualStyleBackColor = true;
 			// 
@@ -261,6 +264,7 @@
 			this.rdbC.Size = new System.Drawing.Size(69, 17);
 			this.rdbC.TabIndex = 28;
 			this.rdbC.TabStop = true;
+			this.rdbC.Tag = "2";
 			this.rdbC.Text = "Completo";
 			this.rdbC.UseVisualStyleBackColor = true;
 			// 
@@ -272,6 +276,7 @@
 			this.rdbE.Size = new System.Drawing.Size(68, 17);
 			this.rdbE.TabIndex = 29;
 			this.rdbE.TabStop = true;
+			this.rdbE.Tag = "3";
 			this.rdbE.Text = "Expresso";
 			this.rdbE.UseVisualStyleBackColor = true;
 			// 
@@ -283,6 +288,7 @@
 			this.rdbN.Size = new System.Drawing.Size(50, 17);
 			this.rdbN.TabIndex = 33;
 			this.rdbN.TabStop = true;
+			this.rdbN.Tag = "3";
 			this.rdbN.Text = "Noite";
 			this.rdbN.UseVisualStyleBackColor = true;
 			// 
@@ -294,6 +300,7 @@
 			this.rdbT.Size = new System.Drawing.Size(53, 17);
 			this.rdbT.TabIndex = 32;
 			this.rdbT.TabStop = true;
+			this.rdbT.Tag = "2";
 			this.rdbT.Text = "Tarde";
 			this.rdbT.UseVisualStyleBackColor = true;
 			// 
@@ -305,6 +312,7 @@
 			this.rdbM.Size = new System.Drawing.Size(58, 17);
 			this.rdbM.TabIndex = 31;
 			this.rdbM.TabStop = true;
+			this.rdbM.Tag = "1";
 			this.rdbM.Text = "Manhã";
 			this.rdbM.UseVisualStyleBackColor = true;
 			// 
@@ -334,11 +342,13 @@
 			// 
 			// txtCEP
 			// 
+			this.txtCEP.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
 			this.txtCEP.Location = new System.Drawing.Point(90, 260);
 			this.txtCEP.Mask = "00000-000";
 			this.txtCEP.Name = "txtCEP";
 			this.txtCEP.Size = new System.Drawing.Size(62, 20);
 			this.txtCEP.TabIndex = 37;
+			this.txtCEP.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
 			// 
 			// label12
 			// 

@@ -40,16 +40,39 @@ namespace TCM
 			String email = txtEmail.Text;
 			String sexo = cmbSexo.SelectedItem.ToString();
 			String rua = txtRua.Text;
-			String numero = txtNum.Text;
-			String cep = txtCEP.Text;
+			int numero = int.Parse(txtNum.Text);
+			int cep = int.Parse(txtCEP.Text);
 			String cidade = txtCidade.Text;
 			String estado = txtEstado.Text;
 			String telefone = txtTelefone.Text;
-			//String curso = grbCurso.
-			//String periodo = rd
+			int curso;
+			int periodo;
 
-			//int num = int.Parse(numero);
-			//int
+			var radioButton = grbCurso.Controls.OfType<RadioButton>()
+					.Where(r => r.Checked).FirstOrDefault();
+			if (radioButton == null)
+			{
+				curso = 0;
+				MessageBox.Show("Por favor selecione um curso");
+			}
+			else
+			{
+				curso = int.Parse(radioButton.Tag.ToString());
+			}
+
+			radioButton = grbPeriodo.Controls.OfType<RadioButton>()
+					.Where(r => r.Checked).FirstOrDefault();
+			if (radioButton == null)
+			{
+				periodo = 0;
+				MessageBox.Show("Por favor selecione um período");
+			}
+			else
+			{
+				periodo = int.Parse(radioButton.Tag.ToString());
+			}
+
+			MessageBox.Show(curso + "/n" + periodo);
 			string check = string.Format("SELECT * FROM ALUNO WHERE NOME = '{0}'", nome);
 			ds = conexao.executarSQL(check);
 			int qnt = ds.Tables[0].Rows.Count;
@@ -59,7 +82,10 @@ namespace TCM
 			}
 			else
 			{
-				string sql = string.Format("INSERT INTO ALUNO (NOME, EMAIL, SEXO, RUA, NUMERO, CEP, CIDADE, ESTADO, TELEFONE) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}')", nome, email, sexo, rua, numero, cep, cidade, estado, telefone);
+				conexao = new ClasseConexao();
+				ds = new DataSet();
+
+				string sql = string.Format("INSERT INTO ALUNO VALUES ('{0}','{1}','{2}','{3}', {4}, {5},'{6}','{7}','{8}', {9}, {10})", nome, email, sexo, rua, numero, cep, cidade, estado, telefone, curso, periodo);
 				MessageBox.Show(sql);
 				ds = conexao.executarSQL(sql);
 			}
