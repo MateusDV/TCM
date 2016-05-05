@@ -21,5 +21,11 @@ namespace TCM
         {
             this.Close();
         }
+
+        private void FrmCadastroFunc_Load(object sender, EventArgs e)
+        {
+            cmbSexo.Items.Add("Masculino");
+            cmbSexo.Items.Add("Feminino");
+        }
     }
 }

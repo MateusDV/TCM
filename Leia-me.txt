@@ -1,0 +1,5 @@
+(informações de login, usuários e senhas)
+
+Administrador/Gerente:
+login: 1
+senha: 1

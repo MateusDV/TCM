@@ -1,0 +1,21 @@
+0.3.7 - 04/04/2016
+- Algumas alterações nas dimensões de formulários, para ir de acordo com
+o design proposto, onde todos os formularios tem dimensão semelhante,
+para parecerem um unico elemento
+- Classe conexão temporariamente removida (será adicionada novamente
+quando o banco de dados em SQL estiver operacional
+- Temporariamente o formulário de cadastro de funcionário, enquanto
+aberto, não permite que o usuario interaja com o formulário principal;
+será corrigido futuramente
+
+0.3.1 - 21/03/16
+-adicionados comentarios ao codigo
+
+0.3 - 21/03/16
+adiçoes:
+-primeiro modelo do formulario de cadastro de funcionarios
+bugs:
+-o botão de fechar no formulário principal não finaliza o programa, é necessario fechar usando o botão "Sair"
+
+0.2 - 18/03/16
+-tela de login e formulário principal
