@@ -26,6 +26,9 @@ namespace TCM
         {
             cmbSexo.Items.Add("Masculino");
             cmbSexo.Items.Add("Feminino");
+
+			cmbCargo.Items.Add("Gerente");
+			cmbCargo.Items.Add("Funcionário");
         }
     }
 }
