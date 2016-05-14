@@ -22,9 +22,9 @@ namespace TCM
 
         private void FrmCadastroProf_Load(object sender, EventArgs e)
         {
-            cmbSexo.Items.Add("Masculino");
-            cmbSexo.Items.Add("Feminino");
-        }
+			cmbSexo.Items.Add("M");
+			cmbSexo.Items.Add("F");
+		}
 
 		private void btnCancelar_Click(object sender, EventArgs e)
 		{
@@ -53,9 +53,12 @@ namespace TCM
 				String email = txtEmail.Text;
 				String senha = txtSenha.Text;
 
+				//checa se os textbox, maskedtextbox estao vazios
 				var emptyTextboxes = from tb in this.Controls.OfType<TextBox>() where string.IsNullOrEmpty(tb.Text) select tb;
 
-				if (emptyTextboxes.Any())
+				var emptyMask = from mb in this.Controls.OfType<MaskedTextBox>() where string.IsNullOrEmpty(mb.Text) select mb;
+
+				if (emptyTextboxes.Any() || emptyMask.Any())
 				{
 					MessageBox.Show("Por favor preencha todos os campos e selecione as opções apropriadas");
 				}

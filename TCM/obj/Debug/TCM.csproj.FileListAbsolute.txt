@@ -76,3 +76,4 @@ J:\Mateus\2° Módulo\PC I\TCM\TCM\obj\Debug\TCM.csproj.GenerateResource.Cache
 J:\Mateus\2° Módulo\PC I\TCM\TCM\obj\Debug\TCM.exe
 J:\Mateus\2° Módulo\PC I\TCM\TCM\obj\Debug\TCM.pdb
 J:\Mateus\2° Módulo\PC I\TCM\TCM\obj\Debug\TCM.csprojResolveAssemblyReference.cache
+C:\Users\mateu\Desktop\Pendrive\2° Módulo\PC I\TCM\TCM\obj\Debug\TCM.FrmConsultaAluno.resources

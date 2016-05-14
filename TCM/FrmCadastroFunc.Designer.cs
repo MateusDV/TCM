@@ -33,7 +33,6 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.txtRua = new System.Windows.Forms.TextBox();
 			this.label3 = new System.Windows.Forms.Label();
-			this.textBox3 = new System.Windows.Forms.TextBox();
 			this.label4 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
 			this.txtCidade = new System.Windows.Forms.TextBox();
@@ -106,13 +105,6 @@
 			this.label3.Size = new System.Drawing.Size(35, 13);
 			this.label3.TabIndex = 5;
 			this.label3.Text = "label3";
-			// 
-			// textBox3
-			// 
-			this.textBox3.Location = new System.Drawing.Point(109, 156);
-			this.textBox3.Name = "textBox3";
-			this.textBox3.Size = new System.Drawing.Size(100, 20);
-			this.textBox3.TabIndex = 4;
 			// 
 			// label4
 			// 
@@ -200,7 +192,7 @@
 			// 
 			// txtBairro
 			// 
-			this.txtBairro.Location = new System.Drawing.Point(109, 156);
+			this.txtBairro.Location = new System.Drawing.Point(109, 158);
 			this.txtBairro.Name = "txtBairro";
 			this.txtBairro.Size = new System.Drawing.Size(374, 20);
 			this.txtBairro.TabIndex = 18;
@@ -213,6 +205,7 @@
 			this.btnCadastrar.TabIndex = 20;
 			this.btnCadastrar.Text = "Cadastrar";
 			this.btnCadastrar.UseVisualStyleBackColor = true;
+			this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
 			// 
 			// btnLimpar
 			// 
@@ -253,11 +246,13 @@
 			// 
 			// txtCEP
 			// 
+			this.txtCEP.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
 			this.txtCEP.Location = new System.Drawing.Point(109, 184);
 			this.txtCEP.Mask = "99999-999";
 			this.txtCEP.Name = "txtCEP";
 			this.txtCEP.Size = new System.Drawing.Size(57, 20);
 			this.txtCEP.TabIndex = 25;
+			this.txtCEP.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
 			// 
 			// label13
 			// 
@@ -279,19 +274,23 @@
 			// 
 			// txtRG
 			// 
+			this.txtRG.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
 			this.txtRG.Location = new System.Drawing.Point(109, 105);
 			this.txtRG.Mask = "99.999.999-9";
 			this.txtRG.Name = "txtRG";
 			this.txtRG.Size = new System.Drawing.Size(70, 20);
 			this.txtRG.TabIndex = 30;
+			this.txtRG.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
 			// 
 			// txtCPF
 			// 
+			this.txtCPF.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
 			this.txtCPF.Location = new System.Drawing.Point(236, 105);
 			this.txtCPF.Mask = "999.999.999-99";
 			this.txtCPF.Name = "txtCPF";
 			this.txtCPF.Size = new System.Drawing.Size(81, 20);
 			this.txtCPF.TabIndex = 31;
+			this.txtCPF.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
 			// 
 			// label15
 			// 
@@ -311,19 +310,23 @@
 			// 
 			// txtFone
 			// 
+			this.txtFone.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
 			this.txtFone.Location = new System.Drawing.Point(109, 209);
 			this.txtFone.Mask = "(99) 9999-9999";
 			this.txtFone.Name = "txtFone";
 			this.txtFone.Size = new System.Drawing.Size(79, 20);
 			this.txtFone.TabIndex = 34;
+			this.txtFone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
 			// 
 			// txtCel
 			// 
+			this.txtCel.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
 			this.txtCel.Location = new System.Drawing.Point(239, 209);
 			this.txtCel.Mask = "(99) 99999-9999";
 			this.txtCel.Name = "txtCel";
 			this.txtCel.Size = new System.Drawing.Size(86, 20);
 			this.txtCel.TabIndex = 35;
+			this.txtCel.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
 			// 
 			// btnCancelar
 			// 
@@ -406,7 +409,6 @@
 			this.Controls.Add(this.txtCidade);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.label3);
-			this.Controls.Add(this.textBox3);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.txtRua);
 			this.Controls.Add(this.label1);
@@ -428,7 +430,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtRua;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtCidade;

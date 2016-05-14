@@ -57,6 +57,12 @@
     <Compile Include="FrmCadastroProf.Designer.cs">
       <DependentUpon>FrmCadastroProf.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmConsultaAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaAluno.Designer.cs">
+      <DependentUpon>FrmConsultaAluno.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,9 @@
     <EmbeddedResource Include="FrmCadastroProf.resx">
       <DependentUpon>FrmCadastroProf.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaAluno.resx">
+      <DependentUpon>FrmConsultaAluno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,6 +111,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

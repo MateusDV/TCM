@@ -22,8 +22,8 @@ namespace TCM
 
 		private void FrmCadastroAluno_Load(object sender, EventArgs e)
 		{
-			cmbSexo.Items.Add("Masculino");
-			cmbSexo.Items.Add("Feminino");
+			cmbSexo.Items.Add("M");
+			cmbSexo.Items.Add("F");
 		}
 
 		private void button3_Click(object sender, EventArgs e)
@@ -53,33 +53,34 @@ namespace TCM
                 int periodo;
 
                 //checa qual radio button está selecionado
-                var radioButton = grbCurso.Controls.OfType<RadioButton>().Where(r => r.Checked).FirstOrDefault();
-                if (radioButton == null)
+                var rCurso = grbCurso.Controls.OfType<RadioButton>().Where(r => r.Checked).FirstOrDefault();
+                if (rCurso == null)
                 {
                     curso = 0;
-                    MessageBox.Show("Por favor selecione um curso");
+                    //MessageBox.Show("Por favor selecione um curso");
                 }
                 else
                 {
-                    curso = int.Parse(radioButton.Tag.ToString());  
+                    curso = int.Parse(rCurso.Tag.ToString());  
                 }
 
-                radioButton = grbPeriodo.Controls.OfType<RadioButton>().Where(r => r.Checked).FirstOrDefault();
-                if (radioButton == null)
+                var rPeriodo = grbPeriodo.Controls.OfType<RadioButton>().Where(r => r.Checked).FirstOrDefault();
+                if (rPeriodo == null)
                 {
                     periodo = 0;
-                    MessageBox.Show("Por favor selecione um período");
+                    //MessageBox.Show("Por favor selecione um período");
                 }
                 else
                 {
-                    periodo = int.Parse(radioButton.Tag.ToString());
+                    periodo = int.Parse(rPeriodo.Tag.ToString());
                 }
 
-
-				//gambiarra, checa se os textbox estao vazios
+				//checa se os textbox, maskedtextbox estao vazios
 				var emptyTextboxes = from tb in this.Controls.OfType<TextBox>()where string.IsNullOrEmpty(tb.Text)select tb;
 
-				if (emptyTextboxes.Any())
+				var emptyMask = from mb in this.Controls.OfType<MaskedTextBox>() where string.IsNullOrEmpty(mb.Text) select mb;
+
+				if (emptyTextboxes.Any() || emptyMask.Any() || rCurso == null || rPeriodo == null)
 				{
 					MessageBox.Show("Por favor preencha todos os campos e selecione as opções apropriadas");
 				}

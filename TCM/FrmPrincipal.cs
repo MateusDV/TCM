@@ -66,6 +66,25 @@ namespace TCM
 			}
 		}
 
+		//botao consultar
+		private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			//nao permite duas instancias do mesmo formulario
+			if (Application.OpenForms.OfType<FrmConsultaAluno>().Count() > 0)
+			{
+				MessageBox.Show("O formulário já está aberto");
+			}
+			else
+			{
+				FrmConsultaAluno frmConsultaA = new FrmConsultaAluno();
+				frmConsultaA.Show();
+				frmConsultaA.MdiParent = this;
+			}
+		}
+
+		//MENU PROFESSOR-----------------------------------------------------------------
+		//botao cadastrar
+
 		private void cadastrarToolStripMenuItem1_Click(object sender, EventArgs e)
 		{
 			//nao permite duas instancias do mesmo formulario

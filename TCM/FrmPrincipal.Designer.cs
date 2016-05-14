@@ -37,6 +37,7 @@
 			this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.logOffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -57,7 +58,8 @@
 			// alunoToolStripMenuItem
 			// 
 			this.alunoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastrarMatricularToolStripMenuItem});
+            this.cadastrarMatricularToolStripMenuItem,
+            this.consultarToolStripMenuItem});
 			this.alunoToolStripMenuItem.Name = "alunoToolStripMenuItem";
 			this.alunoToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
 			this.alunoToolStripMenuItem.Text = "Aluno";
@@ -114,6 +116,13 @@
 			this.sairToolStripMenuItem.ToolTipText = "Fecha o programa";
 			this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
 			// 
+			// consultarToolStripMenuItem
+			// 
+			this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
+			this.consultarToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+			this.consultarToolStripMenuItem.Text = "Consultar";
+			this.consultarToolStripMenuItem.Click += new System.EventHandler(this.consultarToolStripMenuItem_Click);
+			// 
 			// FrmPrincipal
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -144,5 +153,6 @@
 		private System.Windows.Forms.ToolStripMenuItem cadastrarMatricularToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem professorToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem cadastrarToolStripMenuItem1;
+		private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
 	}
 }
