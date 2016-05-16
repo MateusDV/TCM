@@ -168,7 +168,7 @@
 			// 
 			// txtTelefone
 			// 
-			this.txtTelefone.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+			this.txtTelefone.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
 			this.txtTelefone.Location = new System.Drawing.Point(86, 341);
 			this.txtTelefone.Mask = "(00) 0000-0000";
 			this.txtTelefone.Name = "txtTelefone";
@@ -227,6 +227,7 @@
 			this.button2.TabIndex = 11;
 			this.button2.Text = "Limpar";
 			this.button2.UseVisualStyleBackColor = true;
+			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
 			// btnCancelar
 			// 
@@ -346,7 +347,7 @@
 			// 
 			// txtCEP
 			// 
-			this.txtCEP.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+			this.txtCEP.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
 			this.txtCEP.Location = new System.Drawing.Point(86, 289);
 			this.txtCEP.Mask = "00000-000";
 			this.txtCEP.Name = "txtCEP";

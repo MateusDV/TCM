@@ -31,7 +31,7 @@ namespace TCM
 			cmbSexo.Items.Add("F");
 
 			cmbCargo.Items.Add("Gerente");
-			cmbCargo.Items.Add("Funcionário");
+			cmbCargo.Items.Add("Funcionario");
         }
 
 		private void btnCadastrar_Click(object sender, EventArgs e)
@@ -57,6 +57,8 @@ namespace TCM
 				String senha = txtSenha.Text;
 				String cargo = cmbCargo.SelectedItem.ToString();
 
+				bool Valido = Validar.Cpf(cpf);
+
 				//checa se os textbox, maskedtextbox estao vazios
 				var emptyTextboxes = from tb in this.Controls.OfType<TextBox>() where string.IsNullOrEmpty(tb.Text) select tb;
 
@@ -64,9 +66,16 @@ namespace TCM
 
 				//var emptyCmb = from cmb in this.Controls.OfType<ComboBox>() where string.IsNullOrWhiteSpace(cmb.) select cmb;
 
-				if (emptyTextboxes.Any() || emptyMask.Any() /*|| emptyCmb.Any()*/)
+				if (emptyTextboxes.Any() || emptyMask.Any() || Valido == false)
 				{
-					MessageBox.Show("Por favor preencha todos os campos e selecione as opções apropriadas");
+					if (Valido == false)
+					{
+						MessageBox.Show("Por favor digite um CPF válido");
+					}
+					else
+					{
+						MessageBox.Show("Por favor preencha todos os campos e selecione as opções apropriadas");
+					}
 				}
 				else
 				{
@@ -96,6 +105,11 @@ namespace TCM
 			catch (Exception erro)
 			{
 			}
+		}
+
+		private void btnLimpar_Click(object sender, EventArgs e)
+		{
+			Limpar.ClearAllText(this);
 		}
 	}
 }

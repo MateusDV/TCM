@@ -71,21 +71,22 @@ CREATE TABLE FUNCIONARIO (
 	SENHA VARCHAR (80) NOT NULL,
 	CARGO VARCHAR(80)
 )
---GO
---CREATE TABLE NOTAS (
---	ID_ALUNO INT FOREIGN KEY REFERENCES ALUNO(ID_ALUNO)
---)
---insert into ALUNO (NOME, EMAIL, SEXO, RUA, NUM, CEP, CIDADE, ESTADO, TELEFONE) values ('Jessica Fuller', 'jfuller0@eventbrite.com', 'F', 'Mandrake', '50993', 8, 'Jacksonville', 'Florida', 11);
---insert into ALUNO (NOME, EMAIL, SEXO, RUA, NUM, CEP, CIDADE, ESTADO, TELEFONE) values ('Annie Wheeler', 'awheeler1@google.ca', 'F', 'Pawling', '80412', 8, 'Las Vegas', 'Nevada', 11);
---insert into ALUNO (NOME, EMAIL, SEXO, RUA, NUM, CEP, CIDADE, ESTADO, TELEFONE) values ('Brandon Murphy', 'bmurphy2@washingtonpost.com', 'M', 'Transport', '5', 8, 'Portland', 'Oregon', 11);
---insert into ALUNO (NOME, EMAIL, SEXO, RUA, NUM, CEP, CIDADE, ESTADO, TELEFONE) values ('Douglas Edwards', 'dedwards3@oaic.gov.au', 'M', 'Golf View', '6039', 8, 'Oklahoma City', 'Oklahoma', 11);
---insert into ALUNO (NOME, EMAIL, SEXO, RUA, NUM, CEP, CIDADE, ESTADO, TELEFONE) values ('Alan Duncan', 'aduncan4@aol.com', 'M', 'Springs', '67', 8, 'Arlington', 'Virginia', 11);
---insert into ALUNO (NOME, EMAIL, SEXO, RUA, NUM, CEP, CIDADE, ESTADO, TELEFONE) values ('Juan Reed', 'jreed5@cbslocal.com', 'M', 'Rockefeller', '4517', 8, 'Amarillo', 'Texas', 11);
---insert into ALUNO (NOME, EMAIL, SEXO, RUA, NUM, CEP, CIDADE, ESTADO, TELEFONE) values ('Judy Gilbert', 'jgilbert6@booking.com', 'F', 'Northview', '3346', 8, 'Rochester', 'New York', 11);
---insert into ALUNO (NOME, EMAIL, SEXO, RUA, NUM, CEP, CIDADE, ESTADO, TELEFONE) values ('Scott Bishop', 'sbishop7@msn.com', 'M', 'Derek', '01', 8, 'Cincinnati', 'Ohio', 11);
---insert into ALUNO (NOME, EMAIL, SEXO, RUA, NUM, CEP, CIDADE, ESTADO, TELEFONE) values ('Bobby Tucker', 'btucker8@amazon.de', 'M', 'Corben', '30', 8, 'Roanoke', 'Virginia', 11);
---insert into ALUNO (NOME, EMAIL, SEXO, RUA, NUM, CEP, CIDADE, ESTADO, TELEFONE) values ('John Wagner', 'jwagner9@intel.com', 'M', 'Truax', '72424', 8, 'Bethesda', 'Maryland', 11);
---GO
+CREATE TABLE ATIVIDADE (
+	ID_ATIV INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	NOME VARCHAR(40) NOT NULL,
+	DESCRICAO VARCHAR(100) NOT NULL,
+	ID_PROFESSOR INT FOREIGN KEY REFERENCES PROFESSOR(ID_PROFESSOR),
+)
+GO
+
+CREATE TABLE NOTA (
+	ID_NOTA INT NOT NULL IDENTITY(1,1),
+	ID_ATIV INT FOREIGN KEY REFERENCES ATIVIDADE(ID_ATIV),
+	ID_ALUNO INT FOREIGN KEY REFERENCES ALUNO(ID_ALUNO),
+	VALOR DECIMAL(3,1)
+)
+GO
+
 INSERT INTO CURSO VALUES (1, 'BASICO')
 INSERT INTO CURSO VALUES (2, 'COMPLETO')
 INSERT INTO CURSO VALUES (3, 'EXPRESSO')
@@ -93,16 +94,14 @@ INSERT INTO CURSO VALUES (3, 'EXPRESSO')
 INSERT INTO PERIODO VALUES (1, 'MANHA')
 INSERT INTO PERIODO VALUES (2, 'TARDE')
 INSERT INTO PERIODO VALUES (3, 'NOITE')
-
-SELECT * FROM ALUNO
-SELECT * FROM FUNCIONARIO
-SELECT * FROM PROFESSOR
-SELECT * FROM CURSO
-SELECT * FROM PERIODO
+GO
 --SELECT NOME, EMAIL, TELEFONE FROM ALUNO 
 --delete from ALUNO where ID_ALUNO = 2
-
-
+go
+INSERT INTO PROFESSOR VALUES ('ETESP', 'M', '552713237', '221.897.532.09', 'ERWCD', 323, 'LELEL', 'LELEL', 'LELEL', 'LELEL', 'LELEL', 'LELEL', 'etesp@esc.com', '12345')
+INSERT INTO FUNCIONARIO VALUES ('MATEUS', 'LELELE', 'M', 'LELEL', 'LELEL', 323, 'LELEL', 'LELEL', 'LELEL', 'LELEL', 'LELEL', '1234', 'mateus@esc.com', '12345', 'Gerente')
+INSERT INTO FUNCIONARIO VALUES ('NATHALIA', 'LELELE', 'M', 'LELEL', 'LELEL', 323, 'LELEL', 'LELEL', 'LELEL', 'LELEL', 'LELEL', 'LELEL', 'nathalia@esc.com', '12345', 'Funcionario')
+GO
 --INSERT INTO ALUNO VALUES ('ERT','ERG','MASC','SWF','ergdrfg', 5, 111111, 'EEF', 'WEF', '213345', 1, 3)
 insert into ALUNO (NOME, EMAIL, SEXO, SENHA, RUA, NUM, CEP, CIDADE, ESTADO, TELEFONE, ID_CURSO, ID_PERIODO) values ('Adam Kim', 'akim0@webs.com', 'Male', 'akim0', 'Oxford', '5', 38739564, 'Rockford', 'IL', '1-(815)782-0736', 2, 3);
 insert into ALUNO (NOME, EMAIL, SEXO, SENHA, RUA, NUM, CEP, CIDADE, ESTADO, TELEFONE, ID_CURSO, ID_PERIODO) values ('Jeremy Cook', 'jcook1@ibm.com', 'Male', 'jcook1', 'Rigney', '04', 36317543, 'Washington', 'DC', '1-(202)420-9860', 3, 1);
@@ -125,6 +124,13 @@ insert into ALUNO (NOME, EMAIL, SEXO, SENHA, RUA, NUM, CEP, CIDADE, ESTADO, TELE
 insert into ALUNO (NOME, EMAIL, SEXO, SENHA, RUA, NUM, CEP, CIDADE, ESTADO, TELEFONE, ID_CURSO, ID_PERIODO) values ('Helen Alvarez', 'halvarezi@mysql.com', 'Female', 'halvarezi', 'Crest Line', '407', 14643339, 'Glendale', 'AZ', '1-(623)178-6095', 1, 3);
 insert into ALUNO (NOME, EMAIL, SEXO, SENHA, RUA, NUM, CEP, CIDADE, ESTADO, TELEFONE, ID_CURSO, ID_PERIODO) values ('James Porter', 'jporterj@pinterest.com', 'Male', 'jporterj', 'Kenwood', '90', 88088015, 'Killeen', 'TX', '1-(254)347-8766', 3, 1);
 
+SELECT * FROM ALUNO
+SELECT * FROM FUNCIONARIO
+SELECT * FROM PROFESSOR
+SELECT * FROM CURSO
+SELECT * FROM PERIODO
+
+SELECT * FROM ATIVIDADE WHERE ID_PROFESSOR LIKE '%1%'
 ----JUNTA ALUNO COM PERIODO E CURSO
 --SELECT ALUNO.ID_ALUNO, ALUNO.NOME, CURSO.NOME AS CURSO, PERIODO.NOME AS PERIODO
 --FROM ALUNO
@@ -153,7 +159,7 @@ insert into ALUNO (NOME, EMAIL, SEXO, SENHA, RUA, NUM, CEP, CIDADE, ESTADO, TELE
 --SELECT ID_PROFESSOR AS ID, NOME, EMAIL, TELEFONE, CELULAR FROM PROFESSOR
 
 ----ENDERECO
---SELECT ID_PROFESSOR AS ID, NOME, RUA, NUM, CEP, CIDADE, ESTADO FROM PROFESSOR
+--SELECT ID_PROFESSOR AS ID, NOME, RUA, NUM, CEP, BAIRRO, CIDADE, ESTADO FROM PROFESSOR
 
 
 

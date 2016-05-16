@@ -12,13 +12,39 @@ namespace TCM
 {
     public partial class FrmPrincipal : Form
     {
+		Compartilha comp = new Compartilha();
+
         public FrmPrincipal()
         {
             InitializeComponent();
         }
 
-        //botao sair
-        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+		private void FrmPrincipal_Load(object sender, EventArgs e)
+		{
+			string nivel = comp.Nivel;
+			string nome = comp.Nome;
+
+			if (nivel.Equals("gerente", StringComparison.InvariantCultureIgnoreCase))
+			{
+
+			}
+			else if (nivel.Equals("professor", StringComparison.InvariantCultureIgnoreCase))
+			{
+				alunoToolStripMenuItem.Visible = false;
+				funcionárioToolStripMenuItem.Visible = false;
+				cadastrarToolStripMenuItem1.Visible = false;
+				cONSULToolStripMenuItem.Visible = false;
+			}
+			else
+			{
+				cadastrarToolStripMenuItem.Visible = false;
+			}
+
+			tslBV.Text = String.Format("Seja bem vindo {0}", nome);
+		}
+
+		//botao sair
+		private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -48,6 +74,22 @@ namespace TCM
 				frmCadastroF.MdiParent = this;
             }
         }
+
+		//botao consultar
+		private void consultarToolStripMenuItem1_Click(object sender, EventArgs e)
+		{
+			//nao permite duas instancias do mesmo formulario
+			if (Application.OpenForms.OfType<FrmConsultaFunc>().Count() > 0)
+			{
+				MessageBox.Show("O formulário já está aberto");
+			}
+			else
+			{
+				FrmConsultaFunc frmConsultaF = new FrmConsultaFunc();
+				frmConsultaF.Show();
+				frmConsultaF.MdiParent = this;
+			}
+		}
 
 		//MENU ALUNO---------------------------------------------------------------------------------
 		//botao caddastrar
@@ -84,7 +126,6 @@ namespace TCM
 
 		//MENU PROFESSOR-----------------------------------------------------------------
 		//botao cadastrar
-
 		private void cadastrarToolStripMenuItem1_Click(object sender, EventArgs e)
 		{
 			//nao permite duas instancias do mesmo formulario
@@ -97,6 +138,37 @@ namespace TCM
 				FrmCadastroProf frmCadastroP = new FrmCadastroProf();
 				frmCadastroP.Show();
 				frmCadastroP.MdiParent = this;
+			}
+		}
+
+		//botao consultar
+		private void cONSULToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			//nao permite duas instancias do mesmo formulario
+			if (Application.OpenForms.OfType<FrmConsultaProf>().Count() > 0)
+			{
+				MessageBox.Show("O formulário já está aberto");
+			}
+			else
+			{
+				FrmConsultaProf frmConsultaP = new FrmConsultaProf();
+				frmConsultaP.Show();
+				frmConsultaP.MdiParent = this;
+			}
+		}
+
+		private void atividadesToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			//nao permite duas instancias do mesmo formulario
+			if (Application.OpenForms.OfType<FrmAtividades>().Count() > 0)
+			{
+				MessageBox.Show("O formulário já está aberto");
+			}
+			else
+			{
+				FrmAtividades frmAtiv = new FrmAtividades();
+				frmAtiv.Show();
+				frmAtiv.MdiParent = this;
 			}
 		}
 	}

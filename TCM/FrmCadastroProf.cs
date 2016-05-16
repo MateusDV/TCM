@@ -53,14 +53,22 @@ namespace TCM
 				String email = txtEmail.Text;
 				String senha = txtSenha.Text;
 
+				bool Valido = Validar.Cpf(cpf);
 				//checa se os textbox, maskedtextbox estao vazios
 				var emptyTextboxes = from tb in this.Controls.OfType<TextBox>() where string.IsNullOrEmpty(tb.Text) select tb;
 
 				var emptyMask = from mb in this.Controls.OfType<MaskedTextBox>() where string.IsNullOrEmpty(mb.Text) select mb;
 
-				if (emptyTextboxes.Any() || emptyMask.Any())
+				if (emptyTextboxes.Any() || emptyMask.Any() || Valido == false)
 				{
-					MessageBox.Show("Por favor preencha todos os campos e selecione as opções apropriadas");
+					if (Valido == false)
+					{
+						MessageBox.Show("Por favor digite um CPF válido");
+					}
+					else
+					{
+						MessageBox.Show("Por favor preencha todos os campos e selecione as opções apropriadas");
+					}
 				}
 				else
 				{
@@ -91,5 +99,10 @@ namespace TCM
 			{
 			}
         }
+
+		private void btnLimpar_Click(object sender, EventArgs e)
+		{
+			Limpar.ClearAllText(this);
+		}
 	}
 }
