@@ -1,5 +1,14 @@
 (informações de login, usuários e senhas)
 
-Administrador/Gerente:
-login: 1
-senha: 1
+Professor:
+login: etesp@esc.com
+senha: 12345
+
+Funcionario:
+login:
+senha:
+
+Administrador:
+login: mateus@esc.com
+senha: 12345
+

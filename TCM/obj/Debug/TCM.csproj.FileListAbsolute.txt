@@ -80,3 +80,4 @@ C:\Users\mateu\Desktop\Pendrive\2° Módulo\PC I\TCM\TCM\obj\Debug\TCM.FrmConsul
 C:\Users\mateu\Desktop\Pendrive\2° Módulo\PC I\TCM\TCM\obj\Debug\TCM.FrmConsultaProf.resources
 C:\Users\mateu\Desktop\Pendrive\2° Módulo\PC I\TCM\TCM\obj\Debug\TCM.FrmConsultaFunc.resources
 C:\Users\mateu\Desktop\Pendrive\2° Módulo\PC I\TCM\TCM\obj\Debug\TCM.FrmAtividades.resources
+C:\Users\mateu\Desktop\Pendrive\2° Módulo\PC I\TCM\TCM\obj\Debug\TCM.FrmNotas.resources

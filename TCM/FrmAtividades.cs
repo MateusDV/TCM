@@ -34,28 +34,13 @@ namespace TCM
 			//altera a cor das linhas alternadas no grid
 			dgvAtiv.RowsDefaultCellStyle.BackColor = Color.White;
 			dgvAtiv.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
-			//altera o nome das colunas
-			//dgvAtiv.Columns[0].HeaderText = "ID";
-			//dgvAtiv.Columns[1].HeaderText = "NOME";
-			//dgvAtiv.Columns[2].HeaderText = "FONE";
-			//dgvAtiv.Columns[3].HeaderText = "NIVEL";
-			//grid.Columns[3].HeaderText = "PREÇO UNITÁRIO";
-			//dgvAtiv.Columns[0].Width = 20;
-			//dgvAtiv.Columns[1].Width = 150;
-			//dgvAtiv.Columns[2].Width = 80;
-			//dgvAtiv.Columns[3].Width = 50;
-			//formata a coluna para moeda (currency)
-			//grid.Columns[3].DefaultCellStyle.Format = "c";
 			//ao clicar, seleciona a linha inteira
 			dgvAtiv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 			//não permite seleção de multiplas linhas    
 			dgvAtiv.MultiSelect = false;
-			// exibe vazio no lugar de null
-			//dgvAtiv.DefaultCellStyle.NullValue = "";
 			//Expande a célula automáticamente
 			dgvAtiv.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-			//alinha à direita os campos moeda
-			//grid.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+			//read only
 			dgvAtiv.ReadOnly = true;
 			dgvAtiv.RowHeadersVisible = false;
 			dgvAtiv.AllowUserToAddRows = false;
@@ -96,6 +81,9 @@ namespace TCM
 			}
 
 			cmbCampo.Items.AddRange(ativ);
+			cmbCampoMod.Items.AddRange(ativ);
+			cmbCampoMod.Items.Remove("ID_ATIV");
+			cmbCampoMod.Items.Remove("ID_PROFESSOR");
 
 			lblCar.Text = "100";
 		}
@@ -123,7 +111,7 @@ namespace TCM
 
 			String campo = cmbCampo.SelectedItem.ToString();
 			String valor = txtValor.Text;
-			String query = String.Format("SELECT * FROM ATIVIDADE WHERE '{0}' LIKE '%{1}%'", campo, valor);
+			String query = String.Format("SELECT * FROM ATIVIDADE WHERE {0} LIKE '{1}%'", campo, valor);
 
 			atualizar_grid(query);
 		}
@@ -170,6 +158,111 @@ namespace TCM
 
 					String atl = String.Format("SELECT * FROM ATIVIDADE WHERE ID_PROFESSOR = '{0}'", id);
 					atualizar_grid(atl);
+				}
+			}
+		}
+
+		private void dgvAtiv_CellClick(object sender, DataGridViewCellEventArgs e)
+		{
+			txtID.Text = dgvAtiv.Rows[e.RowIndex].Cells[0].Value.ToString();
+		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			conexao = new ClasseConexao();
+			ds = new DataSet();
+
+			try
+			{
+				String ID = txtID.Text;
+				String query = String.Format("DELETE FROM ATIVIDADE WHERE ID_ATIV = '{0}'", ID);
+
+				if (txtID.Text.Equals("") || txtID.Text.Equals(null))
+				{
+					MessageBox.Show("Por favor digite um ID para continuar");
+				}
+				else
+				{
+					string check = string.Format("SELECT * FROM ATIVIDADE WHERE ID_ATIV = '{0}'", ID);
+					ds = conexao.executarSQL(check);
+					int qnt = 0;
+					qnt = ds.Tables[0].Rows.Count;
+
+					if (qnt > 0) //se ja existe
+					{
+						var confirm = MessageBox.Show("Tem certeza que deseja excluir o registro?", "Por favor confirmar", MessageBoxButtons.YesNo);
+						if (confirm.Equals(DialogResult.Yes))
+						{
+							conexao = new ClasseConexao();
+							ds = new DataSet();
+
+							//MessageBox.Show(query);
+							ds = conexao.executarSQL(query);
+
+							String atl = String.Format("SELECT * FROM ATIVIDADE WHERE ID_PROFESSOR = '{0}'", comp.Id);
+							atualizar_grid(atl);
+						}
+						else
+						{
+							// If 'No', do something here.
+						}
+					}
+					else //se nao existe
+					{
+						MessageBox.Show("Esse registro não existe!");
+					}
+				}
+			}
+			catch (Exception erro) { }
+		}
+
+		private void btnMod_Click(object sender, EventArgs e)
+		{
+			String ID = txtID.Text;
+			String campo = cmbCampoMod.SelectedItem.ToString();
+			String valor = txtValorMod.Text;
+			String query = "";
+
+			query = String.Format("UPDATE ATIVIDADE SET {0} = '{1}' WHERE ID_ATIV = '{2}'", campo, valor, ID);
+
+			var emptyTextboxes = from tb in this.Controls.OfType<TextBox>() where string.IsNullOrEmpty(tb.Text) select tb;
+
+			if (emptyTextboxes.Any())
+			{
+				MessageBox.Show("Por favor tenha certeza de que todos os campos estão preenchidos.");
+			}
+			else
+			{
+				conexao = new ClasseConexao();
+				ds = new DataSet();
+
+				string check = string.Format("SELECT * FROM ATIVIDADE WHERE ID_ATIV = '{0}'", ID);
+				ds = conexao.executarSQL(check);
+				int qnt = 0;
+				qnt = ds.Tables[0].Rows.Count;
+
+				if (qnt > 0)
+				{
+					var confirm = MessageBox.Show("Tem certeza que deseja alterar o registro?", "Por favor confirmar", MessageBoxButtons.YesNo);
+					if (confirm.Equals(DialogResult.Yes))
+					{
+						conexao = new ClasseConexao();
+						ds = new DataSet();
+
+						//MessageBox.Show(query);
+						ds = conexao.executarSQL(query);
+
+						String atl = String.Format("SELECT * FROM ATIVIDADE WHERE ID_PROFESSOR = '{0}'", comp.Id);
+						atualizar_grid(atl);
+					}
+					else
+					{
+						// If 'No', do something here.
+					}
+				}
+				else
+				{
+					MessageBox.Show("Por favor escolha um registro válido");
 				}
 			}
 		}

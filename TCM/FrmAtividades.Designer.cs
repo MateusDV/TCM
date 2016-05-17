@@ -45,9 +45,19 @@
 			this.button1 = new System.Windows.Forms.Button();
 			this.grbMod = new System.Windows.Forms.GroupBox();
 			this.btnFechar = new System.Windows.Forms.Button();
+			this.label6 = new System.Windows.Forms.Label();
+			this.txtID = new System.Windows.Forms.TextBox();
+			this.label7 = new System.Windows.Forms.Label();
+			this.txtValorMod = new System.Windows.Forms.TextBox();
+			this.label8 = new System.Windows.Forms.Label();
+			this.cmbCampoMod = new System.Windows.Forms.ComboBox();
+			this.btnMod = new System.Windows.Forms.Button();
+			this.button2 = new System.Windows.Forms.Button();
+			this.label9 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.dgvAtiv)).BeginInit();
 			this.grbPesquisar.SuspendLayout();
 			this.grbCriar.SuspendLayout();
+			this.grbMod.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// dgvAtiv
@@ -57,6 +67,7 @@
 			this.dgvAtiv.Name = "dgvAtiv";
 			this.dgvAtiv.Size = new System.Drawing.Size(440, 481);
 			this.dgvAtiv.TabIndex = 0;
+			this.dgvAtiv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAtiv_CellClick);
 			// 
 			// grbPesquisar
 			// 
@@ -128,7 +139,7 @@
 			this.grbCriar.Controls.Add(this.button1);
 			this.grbCriar.Location = new System.Drawing.Point(458, 122);
 			this.grbCriar.Name = "grbCriar";
-			this.grbCriar.Size = new System.Drawing.Size(325, 200);
+			this.grbCriar.Size = new System.Drawing.Size(325, 159);
 			this.grbCriar.TabIndex = 2;
 			this.grbCriar.TabStop = false;
 			this.grbCriar.Text = "Criar";
@@ -136,7 +147,7 @@
 			// lblCar
 			// 
 			this.lblCar.AutoSize = true;
-			this.lblCar.Location = new System.Drawing.Point(179, 144);
+			this.lblCar.Location = new System.Drawing.Point(179, 104);
 			this.lblCar.Name = "lblCar";
 			this.lblCar.Size = new System.Drawing.Size(0, 13);
 			this.lblCar.TabIndex = 6;
@@ -144,7 +155,7 @@
 			// label5
 			// 
 			this.label5.AutoSize = true;
-			this.label5.Location = new System.Drawing.Point(63, 144);
+			this.label5.Location = new System.Drawing.Point(60, 104);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(110, 13);
 			this.label5.TabIndex = 5;
@@ -164,7 +175,7 @@
 			this.txtDesc.Location = new System.Drawing.Point(63, 46);
 			this.txtDesc.Multiline = true;
 			this.txtDesc.Name = "txtDesc";
-			this.txtDesc.Size = new System.Drawing.Size(242, 91);
+			this.txtDesc.Size = new System.Drawing.Size(242, 55);
 			this.txtDesc.TabIndex = 3;
 			this.txtDesc.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
 			// 
@@ -186,7 +197,7 @@
 			// 
 			// button1
 			// 
-			this.button1.Location = new System.Drawing.Point(6, 171);
+			this.button1.Location = new System.Drawing.Point(3, 131);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(75, 23);
 			this.button1.TabIndex = 0;
@@ -196,9 +207,18 @@
 			// 
 			// grbMod
 			// 
-			this.grbMod.Location = new System.Drawing.Point(458, 328);
+			this.grbMod.Controls.Add(this.label9);
+			this.grbMod.Controls.Add(this.button2);
+			this.grbMod.Controls.Add(this.btnMod);
+			this.grbMod.Controls.Add(this.label7);
+			this.grbMod.Controls.Add(this.txtValorMod);
+			this.grbMod.Controls.Add(this.label8);
+			this.grbMod.Controls.Add(this.cmbCampoMod);
+			this.grbMod.Controls.Add(this.label6);
+			this.grbMod.Controls.Add(this.txtID);
+			this.grbMod.Location = new System.Drawing.Point(458, 287);
 			this.grbMod.Name = "grbMod";
-			this.grbMod.Size = new System.Drawing.Size(325, 135);
+			this.grbMod.Size = new System.Drawing.Size(325, 176);
 			this.grbMod.TabIndex = 3;
 			this.grbMod.TabStop = false;
 			this.grbMod.Text = "Modificar";
@@ -211,6 +231,85 @@
 			this.btnFechar.TabIndex = 4;
 			this.btnFechar.Text = "Fechar";
 			this.btnFechar.UseVisualStyleBackColor = true;
+			// 
+			// label6
+			// 
+			this.label6.AutoSize = true;
+			this.label6.Location = new System.Drawing.Point(28, 63);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(18, 13);
+			this.label6.TabIndex = 5;
+			this.label6.Text = "ID";
+			// 
+			// txtID
+			// 
+			this.txtID.Location = new System.Drawing.Point(52, 60);
+			this.txtID.Name = "txtID";
+			this.txtID.Size = new System.Drawing.Size(121, 20);
+			this.txtID.TabIndex = 4;
+			// 
+			// label7
+			// 
+			this.label7.AutoSize = true;
+			this.label7.Location = new System.Drawing.Point(15, 117);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(31, 13);
+			this.label7.TabIndex = 9;
+			this.label7.Text = "Valor";
+			// 
+			// txtValorMod
+			// 
+			this.txtValorMod.Location = new System.Drawing.Point(52, 114);
+			this.txtValorMod.Name = "txtValorMod";
+			this.txtValorMod.Size = new System.Drawing.Size(121, 20);
+			this.txtValorMod.TabIndex = 8;
+			// 
+			// label8
+			// 
+			this.label8.AutoSize = true;
+			this.label8.Location = new System.Drawing.Point(6, 89);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(40, 13);
+			this.label8.TabIndex = 7;
+			this.label8.Text = "Campo";
+			// 
+			// cmbCampoMod
+			// 
+			this.cmbCampoMod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cmbCampoMod.FormattingEnabled = true;
+			this.cmbCampoMod.Location = new System.Drawing.Point(52, 86);
+			this.cmbCampoMod.Name = "cmbCampoMod";
+			this.cmbCampoMod.Size = new System.Drawing.Size(121, 21);
+			this.cmbCampoMod.TabIndex = 6;
+			// 
+			// btnMod
+			// 
+			this.btnMod.Location = new System.Drawing.Point(5, 147);
+			this.btnMod.Name = "btnMod";
+			this.btnMod.Size = new System.Drawing.Size(75, 23);
+			this.btnMod.TabIndex = 10;
+			this.btnMod.Text = "Alterar";
+			this.btnMod.UseVisualStyleBackColor = true;
+			this.btnMod.Click += new System.EventHandler(this.btnMod_Click);
+			// 
+			// button2
+			// 
+			this.button2.Location = new System.Drawing.Point(182, 58);
+			this.button2.Name = "button2";
+			this.button2.Size = new System.Drawing.Size(75, 23);
+			this.button2.TabIndex = 11;
+			this.button2.Text = "Excluir";
+			this.button2.UseVisualStyleBackColor = true;
+			this.button2.Click += new System.EventHandler(this.button2_Click);
+			// 
+			// label9
+			// 
+			this.label9.Location = new System.Drawing.Point(6, 26);
+			this.label9.Name = "label9";
+			this.label9.Size = new System.Drawing.Size(319, 31);
+			this.label9.TabIndex = 12;
+			this.label9.Text = "Por favor pesquise pelo seu registro e então clique nele, ou insira o respectivo " +
+    "ID abaixo";
 			// 
 			// FrmAtividades
 			// 
@@ -232,6 +331,8 @@
 			this.grbPesquisar.PerformLayout();
 			this.grbCriar.ResumeLayout(false);
 			this.grbCriar.PerformLayout();
+			this.grbMod.ResumeLayout(false);
+			this.grbMod.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -255,5 +356,14 @@
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.TextBox txtNome;
 		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Label label6;
+		private System.Windows.Forms.TextBox txtID;
+		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Button btnMod;
+		private System.Windows.Forms.Label label7;
+		private System.Windows.Forms.TextBox txtValorMod;
+		private System.Windows.Forms.Label label8;
+		private System.Windows.Forms.ComboBox cmbCampoMod;
+		private System.Windows.Forms.Label label9;
 	}
 }

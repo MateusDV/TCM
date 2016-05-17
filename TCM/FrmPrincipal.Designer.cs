@@ -35,6 +35,7 @@
 			this.professorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.cadastrarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.cONSULToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.atividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.funcionárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.consultarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,7 +43,7 @@
 			this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
 			this.tslBV = new System.Windows.Forms.ToolStripLabel();
-			this.atividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.notasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.toolStrip1.SuspendLayout();
 			this.SuspendLayout();
@@ -89,7 +90,8 @@
 			this.professorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastrarToolStripMenuItem1,
             this.cONSULToolStripMenuItem,
-            this.atividadesToolStripMenuItem});
+            this.atividadesToolStripMenuItem,
+            this.notasToolStripMenuItem});
 			this.professorToolStripMenuItem.Name = "professorToolStripMenuItem";
 			this.professorToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
 			this.professorToolStripMenuItem.Text = "Professor";
@@ -108,6 +110,13 @@
 			this.cONSULToolStripMenuItem.Text = "Consultar";
 			this.cONSULToolStripMenuItem.Click += new System.EventHandler(this.cONSULToolStripMenuItem_Click);
 			// 
+			// atividadesToolStripMenuItem
+			// 
+			this.atividadesToolStripMenuItem.Name = "atividadesToolStripMenuItem";
+			this.atividadesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.atividadesToolStripMenuItem.Text = "Atividades";
+			this.atividadesToolStripMenuItem.Click += new System.EventHandler(this.atividadesToolStripMenuItem_Click);
+			// 
 			// funcionárioToolStripMenuItem
 			// 
 			this.funcionárioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -120,14 +129,14 @@
 			// cadastrarToolStripMenuItem
 			// 
 			this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
-			this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
 			this.cadastrarToolStripMenuItem.Text = "Cadastrar";
 			this.cadastrarToolStripMenuItem.Click += new System.EventHandler(this.cadastrarToolStripMenuItem_Click);
 			// 
 			// consultarToolStripMenuItem1
 			// 
 			this.consultarToolStripMenuItem1.Name = "consultarToolStripMenuItem1";
-			this.consultarToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+			this.consultarToolStripMenuItem1.Size = new System.Drawing.Size(125, 22);
 			this.consultarToolStripMenuItem1.Text = "Consultar";
 			this.consultarToolStripMenuItem1.Click += new System.EventHandler(this.consultarToolStripMenuItem1_Click);
 			// 
@@ -163,12 +172,12 @@
 			this.tslBV.Size = new System.Drawing.Size(86, 22);
 			this.tslBV.Text = "toolStripLabel1";
 			// 
-			// atividadesToolStripMenuItem
+			// notasToolStripMenuItem
 			// 
-			this.atividadesToolStripMenuItem.Name = "atividadesToolStripMenuItem";
-			this.atividadesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-			this.atividadesToolStripMenuItem.Text = "Atividades";
-			this.atividadesToolStripMenuItem.Click += new System.EventHandler(this.atividadesToolStripMenuItem_Click);
+			this.notasToolStripMenuItem.Name = "notasToolStripMenuItem";
+			this.notasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.notasToolStripMenuItem.Text = "Notas";
+			this.notasToolStripMenuItem.Click += new System.EventHandler(this.notasToolStripMenuItem_Click);
 			// 
 			// FrmPrincipal
 			// 
@@ -210,5 +219,6 @@
 		private System.Windows.Forms.ToolStrip toolStrip1;
 		private System.Windows.Forms.ToolStripLabel tslBV;
 		private System.Windows.Forms.ToolStripMenuItem atividadesToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem notasToolStripMenuItem;
 	}
 }

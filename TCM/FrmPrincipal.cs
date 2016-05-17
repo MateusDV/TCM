@@ -65,7 +65,7 @@ namespace TCM
             //nao permite duas instancias do mesmo formulario
             if (Application.OpenForms.OfType<FrmCadastroFunc>().Count() > 0)
             {
-                MessageBox.Show("O formulário já está aberto");
+				MessageBox.Show("O formulário já está aberto");
             }
             else
             {
@@ -169,6 +169,21 @@ namespace TCM
 				FrmAtividades frmAtiv = new FrmAtividades();
 				frmAtiv.Show();
 				frmAtiv.MdiParent = this;
+			}
+		}
+
+		private void notasToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			//nao permite duas instancias do mesmo formulario
+			if (Application.OpenForms.OfType<FrmNotas>().Count() > 0)
+			{
+				MessageBox.Show("O formulário já está aberto");
+			}
+			else
+			{
+				FrmNotas frmNotas = new FrmNotas();
+				frmNotas.Show();
+				frmNotas.MdiParent = this;
 			}
 		}
 	}

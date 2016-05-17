@@ -20,11 +20,6 @@ namespace TCM
 		private String[] End = { "ID_FUNCIONARIO", "NOME", "RUA", "NUM", "CEP", "CIDADE", "ESTADO" };
 		private String[] Fun = { "NOME", "SEXO", "RG", "CPF", "CARGO", "RUA", "NUM", "BAIRRO", "CEP", "CIDADE", "ESTADO", "TELEFONE", "CELULAR", "EMAIL" };
 
-		public String[] getPes(){return Pes;}
-		public String[] getCon(){return Con;}
-		public String[] getEnd(){return End;}
-		public String[] getFun(){return Fun;}
-
 		public FrmConsultaFunc()
 		{
 			InitializeComponent();
@@ -40,28 +35,13 @@ namespace TCM
 			//altera a cor das linhas alternadas no grid
 			dgvFunc.RowsDefaultCellStyle.BackColor = Color.White;
 			dgvFunc.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
-			//altera o nome das colunas
-			//dgvFunc.Columns[0].HeaderText = "ID";
-			//dgvFunc.Columns[1].HeaderText = "NOME";
-			//dgvFunc.Columns[2].HeaderText = "FONE";
-			//dgvFunc.Columns[3].HeaderText = "NIVEL";
-			//grid.Columns[3].HeaderText = "PREÇO UNITÁRIO";
-			//dgvFunc.Columns[0].Width = 20;
-			//dgvFunc.Columns[1].Width = 150;
-			//dgvFunc.Columns[2].Width = 80;
-			//dgvFunc.Columns[3].Width = 50;
-			//formata a coluna para moeda (currency)
-			//grid.Columns[3].DefaultCellStyle.Format = "c";
 			//ao clicar, seleciona a linha inteira
 			dgvFunc.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 			//não permite seleção de multiplas linhas    
 			dgvFunc.MultiSelect = false;
-			// exibe vazio no lugar de null
-			//dgvFunc.DefaultCellStyle.NullValue = "";
 			//Expande a célula automáticamente
 			dgvFunc.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-			//alinha à direita os campos moeda
-			//grid.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+			//read only
 			dgvFunc.ReadOnly = true;
 			dgvFunc.RowHeadersVisible = false;
 			dgvFunc.AllowUserToAddRows = false;
@@ -105,7 +85,7 @@ namespace TCM
 			cmbExibe.Items.Add("Contato");
 			cmbExibe.Items.Add("Endereço");
 
-			cmbAltCampo.Items.AddRange(getFun());
+			cmbAltCampo.Items.AddRange(Fun);
 		}
 
 		private void btnExibir_Click(object sender, EventArgs e)
@@ -136,17 +116,17 @@ namespace TCM
 			if (cmbExibe.SelectedItem.Equals("Pessoais"))
 			{
 				cmbCampo.Items.Clear();
-				cmbCampo.Items.AddRange(getPes());
+				cmbCampo.Items.AddRange(Pes);
 			}
 			else if (cmbExibe.SelectedItem.Equals("Contato"))
 			{
 				cmbCampo.Items.Clear();
-				cmbCampo.Items.AddRange(getCon());
+				cmbCampo.Items.AddRange(Con);
 			}
 			else if (cmbExibe.SelectedItem.Equals("Endereço"))
 			{
 				cmbCampo.Items.Clear();
-				cmbCampo.Items.AddRange(getEnd());
+				cmbCampo.Items.AddRange(End);
 			}
 			else
 			{
@@ -229,6 +209,10 @@ namespace TCM
 						{
 							// If 'No', do something here.
 						}
+					}
+					else
+					{
+						MessageBox.Show("Por favor escolha um registro válido");
 					}
 				}
 			}

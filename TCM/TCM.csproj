@@ -94,6 +94,12 @@
     <Compile Include="FrmCadastroFunc.Designer.cs">
       <DependentUpon>FrmCadastroFunc.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmNotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNotas.Designer.cs">
+      <DependentUpon>FrmNotas.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCadastroFunc.resx">
       <DependentUpon>FrmCadastroFunc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNotas.resx">
+      <DependentUpon>FrmNotas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
