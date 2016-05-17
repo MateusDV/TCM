@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.alunoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.cadastrarMatricularToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -36,6 +37,7 @@
 			this.cadastrarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.cONSULToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.atividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.notasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.funcionárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.consultarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,7 +45,6 @@
 			this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
 			this.tslBV = new System.Windows.Forms.ToolStripLabel();
-			this.notasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.toolStrip1.SuspendLayout();
 			this.SuspendLayout();
@@ -99,23 +100,30 @@
 			// cadastrarToolStripMenuItem1
 			// 
 			this.cadastrarToolStripMenuItem1.Name = "cadastrarToolStripMenuItem1";
-			this.cadastrarToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+			this.cadastrarToolStripMenuItem1.Size = new System.Drawing.Size(129, 22);
 			this.cadastrarToolStripMenuItem1.Text = "Cadastrar";
 			this.cadastrarToolStripMenuItem1.Click += new System.EventHandler(this.cadastrarToolStripMenuItem1_Click);
 			// 
 			// cONSULToolStripMenuItem
 			// 
 			this.cONSULToolStripMenuItem.Name = "cONSULToolStripMenuItem";
-			this.cONSULToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.cONSULToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
 			this.cONSULToolStripMenuItem.Text = "Consultar";
 			this.cONSULToolStripMenuItem.Click += new System.EventHandler(this.cONSULToolStripMenuItem_Click);
 			// 
 			// atividadesToolStripMenuItem
 			// 
 			this.atividadesToolStripMenuItem.Name = "atividadesToolStripMenuItem";
-			this.atividadesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.atividadesToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
 			this.atividadesToolStripMenuItem.Text = "Atividades";
 			this.atividadesToolStripMenuItem.Click += new System.EventHandler(this.atividadesToolStripMenuItem_Click);
+			// 
+			// notasToolStripMenuItem
+			// 
+			this.notasToolStripMenuItem.Name = "notasToolStripMenuItem";
+			this.notasToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+			this.notasToolStripMenuItem.Text = "Notas";
+			this.notasToolStripMenuItem.Click += new System.EventHandler(this.notasToolStripMenuItem_Click);
 			// 
 			// funcionárioToolStripMenuItem
 			// 
@@ -172,20 +180,16 @@
 			this.tslBV.Size = new System.Drawing.Size(86, 22);
 			this.tslBV.Text = "toolStripLabel1";
 			// 
-			// notasToolStripMenuItem
-			// 
-			this.notasToolStripMenuItem.Name = "notasToolStripMenuItem";
-			this.notasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-			this.notasToolStripMenuItem.Text = "Notas";
-			this.notasToolStripMenuItem.Click += new System.EventHandler(this.notasToolStripMenuItem_Click);
-			// 
 			// FrmPrincipal
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(800, 558);
 			this.Controls.Add(this.toolStrip1);
 			this.Controls.Add(this.menuStrip1);
+			this.DoubleBuffered = true;
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.IsMdiContainer = true;
 			this.MainMenuStrip = this.menuStrip1;

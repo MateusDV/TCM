@@ -43,7 +43,6 @@
 			this.dgvAtiv = new System.Windows.Forms.DataGridView();
 			this.grbAdicionar = new System.Windows.Forms.GroupBox();
 			this.label11 = new System.Windows.Forms.Label();
-			this.mskNota = new System.Windows.Forms.MaskedTextBox();
 			this.btnAdicionar = new System.Windows.Forms.Button();
 			this.label9 = new System.Windows.Forms.Label();
 			this.label8 = new System.Windows.Forms.Label();
@@ -53,6 +52,7 @@
 			this.txtIDAluno = new System.Windows.Forms.TextBox();
 			this.btnFechar = new System.Windows.Forms.Button();
 			this.label5 = new System.Windows.Forms.Label();
+			this.txtNota = new System.Windows.Forms.TextBox();
 			((System.ComponentModel.ISupportInitialize)(this.dgvNotas)).BeginInit();
 			this.grbPesquisar.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvAluno)).BeginInit();
@@ -185,8 +185,8 @@
 			// 
 			// grbAdicionar
 			// 
+			this.grbAdicionar.Controls.Add(this.txtNota);
 			this.grbAdicionar.Controls.Add(this.label11);
-			this.grbAdicionar.Controls.Add(this.mskNota);
 			this.grbAdicionar.Controls.Add(this.btnAdicionar);
 			this.grbAdicionar.Controls.Add(this.label9);
 			this.grbAdicionar.Controls.Add(this.label8);
@@ -206,19 +206,9 @@
 			this.label11.AutoSize = true;
 			this.label11.Location = new System.Drawing.Point(24, 131);
 			this.label11.Name = "label11";
-			this.label11.Size = new System.Drawing.Size(81, 13);
+			this.label11.Size = new System.Drawing.Size(72, 13);
 			this.label11.TabIndex = 10;
-			this.label11.Text = "Formato:    00.0";
-			// 
-			// mskNota
-			// 
-			this.mskNota.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
-			this.mskNota.Location = new System.Drawing.Point(76, 108);
-			this.mskNota.Mask = "00.0";
-			this.mskNota.Name = "mskNota";
-			this.mskNota.Size = new System.Drawing.Size(29, 20);
-			this.mskNota.TabIndex = 9;
-			this.mskNota.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
+			this.label11.Text = "Formato:    00";
 			// 
 			// btnAdicionar
 			// 
@@ -287,6 +277,7 @@
 			this.btnFechar.TabIndex = 8;
 			this.btnFechar.Text = "Fechar";
 			this.btnFechar.UseVisualStyleBackColor = true;
+			this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
 			// 
 			// label5
 			// 
@@ -297,6 +288,13 @@
 			this.label5.Size = new System.Drawing.Size(45, 17);
 			this.label5.TabIndex = 9;
 			this.label5.Text = "Notas";
+			// 
+			// txtNota
+			// 
+			this.txtNota.Location = new System.Drawing.Point(76, 108);
+			this.txtNota.Name = "txtNota";
+			this.txtNota.Size = new System.Drawing.Size(29, 20);
+			this.txtNota.TabIndex = 11;
 			// 
 			// FrmNotas
 			// 
@@ -352,9 +350,9 @@
 		private System.Windows.Forms.TextBox txtIDAluno;
 		private System.Windows.Forms.Button btnFechar;
 		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.MaskedTextBox mskNota;
 		private System.Windows.Forms.Label label10;
 		private System.Windows.Forms.ComboBox cmbTabela;
 		private System.Windows.Forms.Label label11;
+		private System.Windows.Forms.TextBox txtNota;
 	}
 }

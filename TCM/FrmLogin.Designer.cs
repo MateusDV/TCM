@@ -32,10 +32,10 @@
 			this.txtUser = new System.Windows.Forms.TextBox();
 			this.txtPass = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.ptbLogo = new System.Windows.Forms.PictureBox();
 			this.btnLogin = new System.Windows.Forms.Button();
 			this.btnCancel = new System.Windows.Forms.Button();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -71,13 +71,14 @@
 			this.label2.TabIndex = 2;
 			this.label2.Text = "Senha";
 			// 
-			// pictureBox1
+			// ptbLogo
 			// 
-			this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(157, 157);
-			this.pictureBox1.TabIndex = 4;
-			this.pictureBox1.TabStop = false;
+			this.ptbLogo.Image = global::TCM.Properties.Resources.logo;
+			this.ptbLogo.Location = new System.Drawing.Point(12, 12);
+			this.ptbLogo.Name = "ptbLogo";
+			this.ptbLogo.Size = new System.Drawing.Size(157, 157);
+			this.ptbLogo.TabIndex = 4;
+			this.ptbLogo.TabStop = false;
 			// 
 			// btnLogin
 			// 
@@ -106,7 +107,7 @@
 			this.ClientSize = new System.Drawing.Size(361, 181);
 			this.Controls.Add(this.btnCancel);
 			this.Controls.Add(this.btnLogin);
-			this.Controls.Add(this.pictureBox1);
+			this.Controls.Add(this.ptbLogo);
 			this.Controls.Add(this.txtPass);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.txtUser);
@@ -116,7 +117,7 @@
 			this.Name = "FrmLogin";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Form1";
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -128,7 +129,7 @@
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ptbLogo;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnCancel;
     }

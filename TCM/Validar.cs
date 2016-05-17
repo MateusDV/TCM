@@ -8,8 +8,6 @@ namespace TCM
 {
     class Validar
     {
-		private static decimal result;
-
 		public static bool Data(String v1) 
         {
             DateTime resultado = DateTime.MinValue;
@@ -122,14 +120,9 @@ namespace TCM
             return cnpj.EndsWith(digito);
         }
 
-		public static bool nota(double n)
+		public static bool nota(int n)
 		{
-			double ten = 10.0;
-			if (n > ten)
-			{
-				return false;
-			}
-			else if(n < 0)
+			if (n > 10 || n < 0)
 			{
 				return false;
 			}

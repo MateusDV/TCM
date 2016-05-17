@@ -270,12 +270,12 @@ namespace TCM
 			//conexao = new ClasseConexao();
 			//ds = new DataSet();
 
-			//try
-			//{
+			try
+			{
 				String ID_aluno = txtIDAluno.Text;
 				String ID_ativ = txtIDAtiv.Text;
-				double nota;
-				bool parse = Double.TryParse(mskNota.Text, out nota);
+				int nota;
+				bool parse = int.TryParse(txtNota.Text, out nota);
 
 				bool n = Validar.nota(nota);
 
@@ -283,9 +283,9 @@ namespace TCM
 
 				var emptyMask = from mb in this.Controls.OfType<MaskedTextBox>() where string.IsNullOrEmpty(mb.Text) select mb;
 
-				if (emptyTextboxes.Any() || emptyMask.Any() || mskNota.Text.Length > 4 || parse == false || n == false)
+				if (emptyTextboxes.Any() || emptyMask.Any() || txtNota.Text.Length > 4 || parse == false || n == false)
 				{
-					MessageBox.Show("Por favor tenha certeza de de todos os campos estejam preenchidos e de que a nota esteja no formato 00.0 (´mínimo 0.0, máximo 10.0");
+					MessageBox.Show("Por favor tenha certeza de de todos os campos estejam preenchidos e de que a nota esteja no formato 00 (´mínimo 0, máximo 10");
 				}
 				else
 				{
@@ -324,8 +324,13 @@ namespace TCM
 				}
 
 
-			//}
-			//catch(Exception erro) { }
+			}
+			catch(Exception erro) { }
+		}
+
+		private void btnFechar_Click(object sender, EventArgs e)
+		{
+			this.Close();
 		}
 	}
 }

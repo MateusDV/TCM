@@ -44,16 +44,16 @@
 			this.txtNome = new System.Windows.Forms.TextBox();
 			this.button1 = new System.Windows.Forms.Button();
 			this.grbMod = new System.Windows.Forms.GroupBox();
-			this.btnFechar = new System.Windows.Forms.Button();
-			this.label6 = new System.Windows.Forms.Label();
-			this.txtID = new System.Windows.Forms.TextBox();
+			this.label9 = new System.Windows.Forms.Label();
+			this.button2 = new System.Windows.Forms.Button();
+			this.btnMod = new System.Windows.Forms.Button();
 			this.label7 = new System.Windows.Forms.Label();
 			this.txtValorMod = new System.Windows.Forms.TextBox();
 			this.label8 = new System.Windows.Forms.Label();
 			this.cmbCampoMod = new System.Windows.Forms.ComboBox();
-			this.btnMod = new System.Windows.Forms.Button();
-			this.button2 = new System.Windows.Forms.Button();
-			this.label9 = new System.Windows.Forms.Label();
+			this.label6 = new System.Windows.Forms.Label();
+			this.txtID = new System.Windows.Forms.TextBox();
+			this.btnFechar = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dgvAtiv)).BeginInit();
 			this.grbPesquisar.SuspendLayout();
 			this.grbCriar.SuspendLayout();
@@ -223,30 +223,34 @@
 			this.grbMod.TabStop = false;
 			this.grbMod.Text = "Modificar";
 			// 
-			// btnFechar
+			// label9
 			// 
-			this.btnFechar.Location = new System.Drawing.Point(708, 470);
-			this.btnFechar.Name = "btnFechar";
-			this.btnFechar.Size = new System.Drawing.Size(75, 23);
-			this.btnFechar.TabIndex = 4;
-			this.btnFechar.Text = "Fechar";
-			this.btnFechar.UseVisualStyleBackColor = true;
+			this.label9.Location = new System.Drawing.Point(6, 26);
+			this.label9.Name = "label9";
+			this.label9.Size = new System.Drawing.Size(319, 31);
+			this.label9.TabIndex = 12;
+			this.label9.Text = "Por favor pesquise pelo seu registro e então clique nele, ou insira o respectivo " +
+    "ID abaixo";
 			// 
-			// label6
+			// button2
 			// 
-			this.label6.AutoSize = true;
-			this.label6.Location = new System.Drawing.Point(28, 63);
-			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(18, 13);
-			this.label6.TabIndex = 5;
-			this.label6.Text = "ID";
+			this.button2.Location = new System.Drawing.Point(182, 58);
+			this.button2.Name = "button2";
+			this.button2.Size = new System.Drawing.Size(75, 23);
+			this.button2.TabIndex = 11;
+			this.button2.Text = "Excluir";
+			this.button2.UseVisualStyleBackColor = true;
+			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
-			// txtID
+			// btnMod
 			// 
-			this.txtID.Location = new System.Drawing.Point(52, 60);
-			this.txtID.Name = "txtID";
-			this.txtID.Size = new System.Drawing.Size(121, 20);
-			this.txtID.TabIndex = 4;
+			this.btnMod.Location = new System.Drawing.Point(5, 147);
+			this.btnMod.Name = "btnMod";
+			this.btnMod.Size = new System.Drawing.Size(75, 23);
+			this.btnMod.TabIndex = 10;
+			this.btnMod.Text = "Alterar";
+			this.btnMod.UseVisualStyleBackColor = true;
+			this.btnMod.Click += new System.EventHandler(this.btnMod_Click);
 			// 
 			// label7
 			// 
@@ -282,34 +286,31 @@
 			this.cmbCampoMod.Size = new System.Drawing.Size(121, 21);
 			this.cmbCampoMod.TabIndex = 6;
 			// 
-			// btnMod
+			// label6
 			// 
-			this.btnMod.Location = new System.Drawing.Point(5, 147);
-			this.btnMod.Name = "btnMod";
-			this.btnMod.Size = new System.Drawing.Size(75, 23);
-			this.btnMod.TabIndex = 10;
-			this.btnMod.Text = "Alterar";
-			this.btnMod.UseVisualStyleBackColor = true;
-			this.btnMod.Click += new System.EventHandler(this.btnMod_Click);
+			this.label6.AutoSize = true;
+			this.label6.Location = new System.Drawing.Point(28, 63);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(18, 13);
+			this.label6.TabIndex = 5;
+			this.label6.Text = "ID";
 			// 
-			// button2
+			// txtID
 			// 
-			this.button2.Location = new System.Drawing.Point(182, 58);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(75, 23);
-			this.button2.TabIndex = 11;
-			this.button2.Text = "Excluir";
-			this.button2.UseVisualStyleBackColor = true;
-			this.button2.Click += new System.EventHandler(this.button2_Click);
+			this.txtID.Location = new System.Drawing.Point(52, 60);
+			this.txtID.Name = "txtID";
+			this.txtID.Size = new System.Drawing.Size(121, 20);
+			this.txtID.TabIndex = 4;
 			// 
-			// label9
+			// btnFechar
 			// 
-			this.label9.Location = new System.Drawing.Point(6, 26);
-			this.label9.Name = "label9";
-			this.label9.Size = new System.Drawing.Size(319, 31);
-			this.label9.TabIndex = 12;
-			this.label9.Text = "Por favor pesquise pelo seu registro e então clique nele, ou insira o respectivo " +
-    "ID abaixo";
+			this.btnFechar.Location = new System.Drawing.Point(708, 470);
+			this.btnFechar.Name = "btnFechar";
+			this.btnFechar.Size = new System.Drawing.Size(75, 23);
+			this.btnFechar.TabIndex = 4;
+			this.btnFechar.Text = "Fechar";
+			this.btnFechar.UseVisualStyleBackColor = true;
+			this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
 			// 
 			// FrmAtividades
 			// 

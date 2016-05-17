@@ -24,6 +24,8 @@ namespace TCM
 			string nivel = comp.Nivel;
 			string nome = comp.Nome;
 
+			
+
 			if (nivel.Equals("gerente", StringComparison.InvariantCultureIgnoreCase))
 			{
 
@@ -40,7 +42,7 @@ namespace TCM
 				cadastrarToolStripMenuItem.Visible = false;
 			}
 
-			tslBV.Text = String.Format("Seja bem vindo {0}", nome);
+			tslBV.Text = String.Format("Seja bem vindo(a) {0}", nome);
 		}
 
 		//botao sair
