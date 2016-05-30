@@ -40,18 +40,6 @@ namespace TCM
 			//altera a cor das linhas alternadas no grid
 			dgvAluno.RowsDefaultCellStyle.BackColor = Color.White;
 			dgvAluno.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
-			//altera o nome das colunas
-			//dgvAluno.Columns[0].HeaderText = "ID";
-			//dgvAluno.Columns[1].HeaderText = "NOME";
-			//dgvAluno.Columns[2].HeaderText = "FONE";
-			//dgvAluno.Columns[3].HeaderText = "NIVEL";
-			//grid.Columns[3].HeaderText = "PREÇO UNITÁRIO";
-			//dgvAluno.Columns[0].Width = 20;
-			//dgvAluno.Columns[1].Width = 150;
-			//dgvAluno.Columns[2].Width = 80;
-			//dgvAluno.Columns[3].Width = 50;
-			//formata a coluna para moeda (currency)
-			//grid.Columns[3].DefaultCellStyle.Format = "c";
 			//ao clicar, seleciona a linha inteira
 			dgvAluno.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 			//não permite seleção de multiplas linhas    

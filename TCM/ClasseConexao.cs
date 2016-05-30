@@ -16,7 +16,7 @@ namespace TCM
         {
             try
             {
-                String strConexao = "Password=12345; Persist Security Info=True; User ID=sa; Initial Catalog=AALVES; Data Source=" + Environment.MachineName;
+                String strConexao = String.Format("Password=12345; Persist Security Info=True; User ID=sa; Initial Catalog=AALVES; Data Source={0}", Environment.MachineName);
                 conexao.ConnectionString = strConexao;
                 conexao.Open();
                 return conexao;

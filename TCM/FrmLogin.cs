@@ -33,8 +33,8 @@ namespace TCM
             }
         }
 
-        //botao login
-        private void btnLogin_Click(object sender, EventArgs e)
+		//botao login
+		private void btnLogin_Click(object sender, EventArgs e)
         {
 			////validacao de usuario e senha
 			//if (txtUser.Text.Equals("1") && txtPass.Text.Equals("1"))
@@ -103,5 +103,16 @@ namespace TCM
         {
             Application.Exit(); //Sai da aplicacao
         }
+
+		private void txtPass_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Enter)
+			{
+				btnLogin.PerformClick();
+				// these last two lines will stop the beep sound
+				e.SuppressKeyPress = true;
+				e.Handled = true;
+			}
+		}
 	}
 }

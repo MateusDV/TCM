@@ -52,6 +52,7 @@
 			this.btnExcluir = new System.Windows.Forms.Button();
 			this.btnAlterar = new System.Windows.Forms.Button();
 			this.btnFechar = new System.Windows.Forms.Button();
+			this.label7 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.dgvFunc)).BeginInit();
 			this.grpExibir.SuspendLayout();
 			this.grbPesquisa.SuspendLayout();
@@ -61,9 +62,9 @@
 			// dgvFunc
 			// 
 			this.dgvFunc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgvFunc.Location = new System.Drawing.Point(12, 12);
+			this.dgvFunc.Location = new System.Drawing.Point(12, 25);
 			this.dgvFunc.Name = "dgvFunc";
-			this.dgvFunc.Size = new System.Drawing.Size(771, 306);
+			this.dgvFunc.Size = new System.Drawing.Size(771, 314);
 			this.dgvFunc.TabIndex = 0;
 			// 
 			// grpExibir
@@ -72,16 +73,16 @@
 			this.grpExibir.Controls.Add(this.rdbEnd);
 			this.grpExibir.Controls.Add(this.rdbContato);
 			this.grpExibir.Controls.Add(this.rdbPessoais);
-			this.grpExibir.Location = new System.Drawing.Point(13, 325);
+			this.grpExibir.Location = new System.Drawing.Point(13, 345);
 			this.grpExibir.Name = "grpExibir";
-			this.grpExibir.Size = new System.Drawing.Size(97, 168);
+			this.grpExibir.Size = new System.Drawing.Size(97, 148);
 			this.grpExibir.TabIndex = 1;
 			this.grpExibir.TabStop = false;
 			this.grpExibir.Text = "Informações";
 			// 
 			// btnExibir
 			// 
-			this.btnExibir.Location = new System.Drawing.Point(7, 139);
+			this.btnExibir.Location = new System.Drawing.Point(6, 119);
 			this.btnExibir.Name = "btnExibir";
 			this.btnExibir.Size = new System.Drawing.Size(75, 23);
 			this.btnExibir.TabIndex = 3;
@@ -131,9 +132,9 @@
 			this.grbPesquisa.Controls.Add(this.txtPesquisa);
 			this.grbPesquisa.Controls.Add(this.cmbCampo);
 			this.grbPesquisa.Controls.Add(this.cmbExibe);
-			this.grbPesquisa.Location = new System.Drawing.Point(116, 325);
+			this.grbPesquisa.Location = new System.Drawing.Point(116, 345);
 			this.grbPesquisa.Name = "grbPesquisa";
-			this.grbPesquisa.Size = new System.Drawing.Size(190, 168);
+			this.grbPesquisa.Size = new System.Drawing.Size(190, 148);
 			this.grbPesquisa.TabIndex = 2;
 			this.grbPesquisa.TabStop = false;
 			this.grbPesquisa.Text = "Pesquisa";
@@ -167,7 +168,7 @@
 			// 
 			// btnPesquisa
 			// 
-			this.btnPesquisa.Location = new System.Drawing.Point(7, 139);
+			this.btnPesquisa.Location = new System.Drawing.Point(6, 119);
 			this.btnPesquisa.Name = "btnPesquisa";
 			this.btnPesquisa.Size = new System.Drawing.Size(75, 23);
 			this.btnPesquisa.TabIndex = 3;
@@ -211,9 +212,9 @@
 			this.grbModificar.Controls.Add(this.txtID);
 			this.grbModificar.Controls.Add(this.btnExcluir);
 			this.grbModificar.Controls.Add(this.btnAlterar);
-			this.grbModificar.Location = new System.Drawing.Point(313, 325);
+			this.grbModificar.Location = new System.Drawing.Point(313, 345);
 			this.grbModificar.Name = "grbModificar";
-			this.grbModificar.Size = new System.Drawing.Size(389, 168);
+			this.grbModificar.Size = new System.Drawing.Size(389, 148);
 			this.grbModificar.TabIndex = 3;
 			this.grbModificar.TabStop = false;
 			this.grbModificar.Text = "Modificar";
@@ -280,7 +281,7 @@
 			// 
 			// btnAlterar
 			// 
-			this.btnAlterar.Location = new System.Drawing.Point(6, 139);
+			this.btnAlterar.Location = new System.Drawing.Point(6, 119);
 			this.btnAlterar.Name = "btnAlterar";
 			this.btnAlterar.Size = new System.Drawing.Size(75, 23);
 			this.btnAlterar.TabIndex = 0;
@@ -298,11 +299,22 @@
 			this.btnFechar.UseVisualStyleBackColor = true;
 			this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
 			// 
+			// label7
+			// 
+			this.label7.AutoSize = true;
+			this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label7.Location = new System.Drawing.Point(297, 5);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(168, 17);
+			this.label7.TabIndex = 10;
+			this.label7.Text = "Consulta de Funcionários";
+			// 
 			// FrmConsultaFunc
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(795, 505);
+			this.Controls.Add(this.label7);
 			this.Controls.Add(this.btnFechar);
 			this.Controls.Add(this.grbModificar);
 			this.Controls.Add(this.grbPesquisa);
@@ -321,6 +333,7 @@
 			this.grbModificar.ResumeLayout(false);
 			this.grbModificar.PerformLayout();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
@@ -350,5 +363,6 @@
 		private System.Windows.Forms.TextBox txtID;
 		private System.Windows.Forms.Button btnExcluir;
 		private System.Windows.Forms.Button btnAlterar;
+		private System.Windows.Forms.Label label7;
 	}
 }

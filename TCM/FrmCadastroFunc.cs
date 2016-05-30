@@ -111,5 +111,24 @@ namespace TCM
 		{
 			Limpar.ClearAllText(this);
 		}
+
+		private void pictureBox1_Click(object sender, EventArgs e)
+		{
+			txtNome.Text = "Fatima Cardoso";
+			cmbSexo.Text = "F";
+			txtRG.Text = "473097415";
+			txtCPF.Text = "25337075209";
+			txtEmail.Text = "fatimaC@gmail.com";
+			txtSenha.Text = "12345";
+			cmbCargo.Text = "Funcionario";
+			txtRua.Text = "Marcos Silva";
+			txtNum.Text = "321";
+			txtBairro.Text = "Centro";
+			txtCEP.Text = "04146001";
+			txtCidade.Text = "Sao Paulo";
+			txtEstado.Text = "Sao Paulo";
+			txtFone.Text = "01184121357";
+			txtCel.Text = "011964236785";
+		}
 	}
 }

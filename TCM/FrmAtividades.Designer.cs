@@ -54,6 +54,7 @@
 			this.label6 = new System.Windows.Forms.Label();
 			this.txtID = new System.Windows.Forms.TextBox();
 			this.btnFechar = new System.Windows.Forms.Button();
+			this.label10 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.dgvAtiv)).BeginInit();
 			this.grbPesquisar.SuspendLayout();
 			this.grbCriar.SuspendLayout();
@@ -63,9 +64,9 @@
 			// dgvAtiv
 			// 
 			this.dgvAtiv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgvAtiv.Location = new System.Drawing.Point(12, 12);
+			this.dgvAtiv.Location = new System.Drawing.Point(12, 31);
 			this.dgvAtiv.Name = "dgvAtiv";
-			this.dgvAtiv.Size = new System.Drawing.Size(440, 481);
+			this.dgvAtiv.Size = new System.Drawing.Size(440, 462);
 			this.dgvAtiv.TabIndex = 0;
 			this.dgvAtiv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAtiv_CellClick);
 			// 
@@ -312,11 +313,22 @@
 			this.btnFechar.UseVisualStyleBackColor = true;
 			this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
 			// 
+			// label10
+			// 
+			this.label10.AutoSize = true;
+			this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label10.Location = new System.Drawing.Point(196, 9);
+			this.label10.Name = "label10";
+			this.label10.Size = new System.Drawing.Size(73, 17);
+			this.label10.TabIndex = 10;
+			this.label10.Text = "Atividades";
+			// 
 			// FrmAtividades
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(795, 505);
+			this.Controls.Add(this.label10);
 			this.Controls.Add(this.btnFechar);
 			this.Controls.Add(this.grbMod);
 			this.Controls.Add(this.grbCriar);
@@ -335,6 +347,7 @@
 			this.grbMod.ResumeLayout(false);
 			this.grbMod.PerformLayout();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
@@ -366,5 +379,6 @@
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.ComboBox cmbCampoMod;
 		private System.Windows.Forms.Label label9;
+		private System.Windows.Forms.Label label10;
 	}
 }

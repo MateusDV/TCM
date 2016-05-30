@@ -26,13 +26,26 @@ namespace TCM
 			cmbSexo.Items.Add("F");
 		}
 
-		private void btnCancelar_Click(object sender, EventArgs e)
+		private void pictureBox1_Click(object sender, EventArgs e)
 		{
-			this.Close();
+			txtNome.Text = "Rafael Lima";
+			cmbSexo.Text = "M";
+			txtRG.Text = "439834608";
+			txtCPF.Text = "05380505783";
+			txtEmail.Text = "rafaelL@gmail.com";
+			txtSenha.Text = "12345";
+			txtRua.Text = "Jose Carlos";
+			txtNum.Text = "576";
+			txtBairro.Text = "Vila Nova";
+			txtCEP.Text = "09862537";
+			txtCidade.Text = "Sao Paulo";
+			txtEstado.Text = "Sao Paulo";
+			txtFone.Text = "01183582538";
+			txtCel.Text = "011982546587";
 		}
 
-        private void btnCadastrar_Click(object sender, EventArgs e)
-        {
+		private void btnCadastrar_Click(object sender, EventArgs e)
+		{
 			conexao = new ClasseConexao();
 			ds = new DataSet();
 
@@ -95,14 +108,19 @@ namespace TCM
 					}
 				}
 			}
-			catch (Exception erro) 
+			catch (Exception erro)
 			{
 			}
-        }
+		}
 
 		private void btnLimpar_Click(object sender, EventArgs e)
 		{
 			Limpar.ClearAllText(this);
+		}
+
+		private void btnCancelar_Click(object sender, EventArgs e)
+		{
+			this.Close();
 		}
 	}
 }
