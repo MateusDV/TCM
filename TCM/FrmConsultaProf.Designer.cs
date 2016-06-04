@@ -82,11 +82,12 @@
 			// 
 			// btnExibir
 			// 
-			this.btnExibir.Location = new System.Drawing.Point(6, 119);
+			this.btnExibir.BackgroundImage = global::TCM.Properties.Resources.EXIBIR_1;
+			this.btnExibir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.btnExibir.Location = new System.Drawing.Point(6, 111);
 			this.btnExibir.Name = "btnExibir";
-			this.btnExibir.Size = new System.Drawing.Size(75, 23);
+			this.btnExibir.Size = new System.Drawing.Size(85, 31);
 			this.btnExibir.TabIndex = 3;
-			this.btnExibir.Text = "Exibir";
 			this.btnExibir.UseVisualStyleBackColor = true;
 			this.btnExibir.Click += new System.EventHandler(this.btnExibir_Click);
 			// 
@@ -168,11 +169,12 @@
 			// 
 			// btnPesquisa
 			// 
-			this.btnPesquisa.Location = new System.Drawing.Point(6, 119);
+			this.btnPesquisa.BackgroundImage = global::TCM.Properties.Resources.PESQUISAR_1;
+			this.btnPesquisa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.btnPesquisa.Location = new System.Drawing.Point(6, 111);
 			this.btnPesquisa.Name = "btnPesquisa";
-			this.btnPesquisa.Size = new System.Drawing.Size(75, 23);
+			this.btnPesquisa.Size = new System.Drawing.Size(85, 31);
 			this.btnPesquisa.TabIndex = 3;
-			this.btnPesquisa.Text = "Pesquisar";
 			this.btnPesquisa.UseVisualStyleBackColor = true;
 			this.btnPesquisa.Click += new System.EventHandler(this.btnPesquisa_Click);
 			// 
@@ -214,7 +216,7 @@
 			this.grbModificar.Controls.Add(this.btnAlterar);
 			this.grbModificar.Location = new System.Drawing.Point(313, 345);
 			this.grbModificar.Name = "grbModificar";
-			this.grbModificar.Size = new System.Drawing.Size(389, 148);
+			this.grbModificar.Size = new System.Drawing.Size(379, 148);
 			this.grbModificar.TabIndex = 3;
 			this.grbModificar.TabStop = false;
 			this.grbModificar.Text = "Modificar";
@@ -266,36 +268,39 @@
 			// 
 			this.txtID.Location = new System.Drawing.Point(52, 21);
 			this.txtID.Name = "txtID";
-			this.txtID.Size = new System.Drawing.Size(100, 20);
+			this.txtID.Size = new System.Drawing.Size(90, 20);
 			this.txtID.TabIndex = 2;
 			// 
 			// btnExcluir
 			// 
-			this.btnExcluir.Location = new System.Drawing.Point(158, 19);
+			this.btnExcluir.BackgroundImage = global::TCM.Properties.Resources.EXCLUIR_1;
+			this.btnExcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.btnExcluir.Location = new System.Drawing.Point(148, 13);
 			this.btnExcluir.Name = "btnExcluir";
-			this.btnExcluir.Size = new System.Drawing.Size(75, 23);
+			this.btnExcluir.Size = new System.Drawing.Size(85, 31);
 			this.btnExcluir.TabIndex = 1;
-			this.btnExcluir.Text = "Excluir";
 			this.btnExcluir.UseVisualStyleBackColor = true;
 			this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
 			// 
 			// btnAlterar
 			// 
-			this.btnAlterar.Location = new System.Drawing.Point(6, 119);
+			this.btnAlterar.BackgroundImage = global::TCM.Properties.Resources.ALTERAR_1;
+			this.btnAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.btnAlterar.Location = new System.Drawing.Point(6, 111);
 			this.btnAlterar.Name = "btnAlterar";
-			this.btnAlterar.Size = new System.Drawing.Size(75, 23);
+			this.btnAlterar.Size = new System.Drawing.Size(85, 31);
 			this.btnAlterar.TabIndex = 0;
-			this.btnAlterar.Text = "Alterar";
 			this.btnAlterar.UseVisualStyleBackColor = true;
 			this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
 			// 
 			// btnFechar
 			// 
-			this.btnFechar.Location = new System.Drawing.Point(708, 470);
+			this.btnFechar.BackgroundImage = global::TCM.Properties.Resources.FECHAR_1;
+			this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.btnFechar.Location = new System.Drawing.Point(698, 462);
 			this.btnFechar.Name = "btnFechar";
-			this.btnFechar.Size = new System.Drawing.Size(75, 23);
+			this.btnFechar.Size = new System.Drawing.Size(85, 31);
 			this.btnFechar.TabIndex = 4;
-			this.btnFechar.Text = "Fechar";
 			this.btnFechar.UseVisualStyleBackColor = true;
 			this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
 			// 

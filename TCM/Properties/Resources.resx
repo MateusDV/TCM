@@ -118,13 +118,46 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="logo_pr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="logo_pr1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\imagens\logo_pr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PESQUISAR_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\botoes\PESQUISAR_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EXIBIR_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\botoes\EXIBIR_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FECHAR_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\botoes\FECHAR_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CRIAR_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\botoes\CRIAR_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LIMPAR_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\botoes\LIMPAR_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ALTERAR_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\botoes\ALTERAR_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CANCELAR_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\botoes\CANCELAR_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGIN_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\botoes\LOGIN_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EXCLUIR_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\botoes\EXCLUIR_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CADASTRAR_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\botoes\CADASTRAR_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\imagens\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logo_pr1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="logo_pr" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\imagens\logo_pr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ADICIONAR_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\botoes\ADICIONAR_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

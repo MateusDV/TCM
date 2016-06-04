@@ -43,9 +43,6 @@
 			this.label6 = new System.Windows.Forms.Label();
 			this.txtEstado = new System.Windows.Forms.TextBox();
 			this.label7 = new System.Windows.Forms.Label();
-			this.button1 = new System.Windows.Forms.Button();
-			this.button2 = new System.Windows.Forms.Button();
-			this.btnCancelar = new System.Windows.Forms.Button();
 			this.label11 = new System.Windows.Forms.Label();
 			this.rdbBasico = new System.Windows.Forms.RadioButton();
 			this.rdbIntermediario = new System.Windows.Forms.RadioButton();
@@ -64,6 +61,9 @@
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.btnCancelar = new System.Windows.Forms.Button();
+			this.button2 = new System.Windows.Forms.Button();
+			this.button1 = new System.Windows.Forms.Button();
 			this.grbPeriodo.SuspendLayout();
 			this.grbCurso.SuspendLayout();
 			this.groupBox1.SuspendLayout();
@@ -194,37 +194,6 @@
 			this.label7.Size = new System.Drawing.Size(40, 13);
 			this.label7.TabIndex = 21;
 			this.label7.Text = "Estado";
-			// 
-			// button1
-			// 
-			this.button1.Location = new System.Drawing.Point(12, 470);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(75, 23);
-			this.button1.TabIndex = 10;
-			this.button1.Text = "Cadastrar";
-			this.button1.UseVisualStyleBackColor = true;
-			this.button1.Click += new System.EventHandler(this.button1_Click);
-			// 
-			// button2
-			// 
-			this.button2.FlatAppearance.BorderSize = 0;
-			this.button2.Location = new System.Drawing.Point(93, 470);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(75, 23);
-			this.button2.TabIndex = 11;
-			this.button2.Text = "Limpar";
-			this.button2.UseVisualStyleBackColor = true;
-			this.button2.Click += new System.EventHandler(this.button2_Click);
-			// 
-			// btnCancelar
-			// 
-			this.btnCancelar.Location = new System.Drawing.Point(708, 472);
-			this.btnCancelar.Name = "btnCancelar";
-			this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-			this.btnCancelar.TabIndex = 12;
-			this.btnCancelar.Text = "Cancelar";
-			this.btnCancelar.UseVisualStyleBackColor = true;
-			this.btnCancelar.Click += new System.EventHandler(this.button3_Click);
 			// 
 			// label11
 			// 
@@ -429,12 +398,46 @@
 			// 
 			// pictureBox1
 			// 
-			this.pictureBox1.Location = new System.Drawing.Point(174, 443);
+			this.pictureBox1.Location = new System.Drawing.Point(244, 443);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(100, 50);
 			this.pictureBox1.TabIndex = 43;
 			this.pictureBox1.TabStop = false;
 			this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+			// 
+			// btnCancelar
+			// 
+			this.btnCancelar.BackgroundImage = global::TCM.Properties.Resources.CANCELAR_1;
+			this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.btnCancelar.Location = new System.Drawing.Point(668, 454);
+			this.btnCancelar.Name = "btnCancelar";
+			this.btnCancelar.Size = new System.Drawing.Size(115, 41);
+			this.btnCancelar.TabIndex = 12;
+			this.btnCancelar.UseVisualStyleBackColor = true;
+			this.btnCancelar.Click += new System.EventHandler(this.button3_Click);
+			// 
+			// button2
+			// 
+			this.button2.BackgroundImage = global::TCM.Properties.Resources.LIMPAR_1;
+			this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.button2.FlatAppearance.BorderSize = 0;
+			this.button2.Location = new System.Drawing.Point(122, 454);
+			this.button2.Name = "button2";
+			this.button2.Size = new System.Drawing.Size(116, 39);
+			this.button2.TabIndex = 11;
+			this.button2.UseVisualStyleBackColor = true;
+			this.button2.Click += new System.EventHandler(this.button2_Click);
+			// 
+			// button1
+			// 
+			this.button1.BackgroundImage = global::TCM.Properties.Resources.CADASTRAR_1;
+			this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.button1.Location = new System.Drawing.Point(12, 454);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(107, 39);
+			this.button1.TabIndex = 10;
+			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// FrmCadastroAluno
 			// 

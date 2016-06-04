@@ -197,9 +197,41 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="botoes\ADICIONAR_1.jpg" />
+    <Content Include="botoes\ALTERAR_1.jpg" />
+    <Content Include="botoes\ALTERAR_1_Click.jpg" />
+    <Content Include="botoes\ALTERAR_1_Hover.jpg" />
+    <Content Include="botoes\CADASTRAR_1.jpg" />
+    <Content Include="botoes\CADASTRAR_1_Click.jpg" />
+    <Content Include="botoes\CADASTRAR_1_Hover.jpg" />
+    <Content Include="botoes\CANCELAR_1.jpg" />
+    <Content Include="botoes\CANCELAR_1_Click.jpg" />
+    <Content Include="botoes\CANCELAR_1_Hover.jpg" />
+    <Content Include="botoes\CRIAR_1.jpg" />
+    <Content Include="botoes\CRIAR_1_Click.jpg" />
+    <Content Include="botoes\CRIAR_1_Hover.jpg" />
+    <Content Include="botoes\EXCLUIR_1.jpg" />
+    <Content Include="botoes\EXCLUIR_1_Click.jpg" />
+    <Content Include="botoes\EXCLUIR_1_Hover.jpg" />
+    <Content Include="botoes\EXIBIR_1.jpg" />
+    <Content Include="botoes\EXIBIR_1_Click.jpg" />
+    <Content Include="botoes\EXIBIR_1_Hover.jpg" />
+    <Content Include="botoes\FECHAR_1.jpg" />
+    <Content Include="botoes\FECHAR_1_Click.jpg" />
+    <Content Include="botoes\FECHAR_1_Hover.jpg" />
+    <Content Include="botoes\LIMPAR_1.jpg" />
+    <Content Include="botoes\LIMPAR_1_Click.jpg" />
+    <Content Include="botoes\LIMPAR_1_Hover.jpg" />
+    <Content Include="botoes\LOGIN_1.jpg" />
+    <Content Include="botoes\LOGIN_1_Click.jpg" />
+    <Content Include="botoes\LOGIN_1_Hover.jpg" />
+    <Content Include="botoes\PESQUISAR_1.jpg" />
+    <Content Include="botoes\PESQUISAR_1_Click.jpg" />
+    <Content Include="botoes\PESQUISAR_1_Hover.jpg" />
     <Content Include="imagens\logo.png" />
     <Content Include="imagens\logo_pr.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -367,37 +367,40 @@
 			// 
 			// btnCancelar
 			// 
-			this.btnCancelar.Location = new System.Drawing.Point(707, 471);
+			this.btnCancelar.BackgroundImage = global::TCM.Properties.Resources.CANCELAR_1;
+			this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.btnCancelar.Location = new System.Drawing.Point(676, 454);
 			this.btnCancelar.Name = "btnCancelar";
-			this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+			this.btnCancelar.Size = new System.Drawing.Size(107, 39);
 			this.btnCancelar.TabIndex = 75;
-			this.btnCancelar.Text = "Cancelar";
 			this.btnCancelar.UseVisualStyleBackColor = true;
 			this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
 			// 
 			// btnLimpar
 			// 
-			this.btnLimpar.Location = new System.Drawing.Point(92, 471);
+			this.btnLimpar.BackgroundImage = global::TCM.Properties.Resources.LIMPAR_1;
+			this.btnLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.btnLimpar.Location = new System.Drawing.Point(125, 454);
 			this.btnLimpar.Name = "btnLimpar";
-			this.btnLimpar.Size = new System.Drawing.Size(75, 23);
+			this.btnLimpar.Size = new System.Drawing.Size(107, 39);
 			this.btnLimpar.TabIndex = 74;
-			this.btnLimpar.Text = "Limpar";
 			this.btnLimpar.UseVisualStyleBackColor = true;
 			this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
 			// 
 			// btnCadastrar
 			// 
-			this.btnCadastrar.Location = new System.Drawing.Point(11, 471);
+			this.btnCadastrar.BackgroundImage = global::TCM.Properties.Resources.CADASTRAR_1;
+			this.btnCadastrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.btnCadastrar.Location = new System.Drawing.Point(12, 454);
 			this.btnCadastrar.Name = "btnCadastrar";
-			this.btnCadastrar.Size = new System.Drawing.Size(75, 23);
+			this.btnCadastrar.Size = new System.Drawing.Size(107, 39);
 			this.btnCadastrar.TabIndex = 73;
-			this.btnCadastrar.Text = "Cadastrar";
 			this.btnCadastrar.UseVisualStyleBackColor = true;
 			this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
 			// 
 			// pictureBox1
 			// 
-			this.pictureBox1.Location = new System.Drawing.Point(173, 444);
+			this.pictureBox1.Location = new System.Drawing.Point(239, 443);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(100, 50);
 			this.pictureBox1.TabIndex = 78;

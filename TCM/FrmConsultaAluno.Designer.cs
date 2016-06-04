@@ -30,7 +30,6 @@
 		{
 			this.dgvAluno = new System.Windows.Forms.DataGridView();
 			this.grpExibir = new System.Windows.Forms.GroupBox();
-			this.btnExibir = new System.Windows.Forms.Button();
 			this.rdbEnd = new System.Windows.Forms.RadioButton();
 			this.rdbContato = new System.Windows.Forms.RadioButton();
 			this.rdbPessoais = new System.Windows.Forms.RadioButton();
@@ -38,7 +37,6 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
-			this.btnPesquisa = new System.Windows.Forms.Button();
 			this.txtPesquisa = new System.Windows.Forms.TextBox();
 			this.cmbCampo = new System.Windows.Forms.ComboBox();
 			this.cmbExibe = new System.Windows.Forms.ComboBox();
@@ -49,10 +47,12 @@
 			this.label5 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
 			this.txtID = new System.Windows.Forms.TextBox();
+			this.label7 = new System.Windows.Forms.Label();
+			this.btnFechar = new System.Windows.Forms.Button();
 			this.btnExcluir = new System.Windows.Forms.Button();
 			this.btnAlterar = new System.Windows.Forms.Button();
-			this.btnFechar = new System.Windows.Forms.Button();
-			this.label7 = new System.Windows.Forms.Label();
+			this.btnPesquisa = new System.Windows.Forms.Button();
+			this.btnExibir = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dgvAluno)).BeginInit();
 			this.grpExibir.SuspendLayout();
 			this.grbPesquisa.SuspendLayout();
@@ -79,16 +79,6 @@
 			this.grpExibir.TabIndex = 1;
 			this.grpExibir.TabStop = false;
 			this.grpExibir.Text = "Informações";
-			// 
-			// btnExibir
-			// 
-			this.btnExibir.Location = new System.Drawing.Point(6, 119);
-			this.btnExibir.Name = "btnExibir";
-			this.btnExibir.Size = new System.Drawing.Size(75, 23);
-			this.btnExibir.TabIndex = 3;
-			this.btnExibir.Text = "Exibir";
-			this.btnExibir.UseVisualStyleBackColor = true;
-			this.btnExibir.Click += new System.EventHandler(this.btnExibir_Click);
 			// 
 			// rdbEnd
 			// 
@@ -166,16 +156,6 @@
 			this.label1.TabIndex = 4;
 			this.label1.Text = "Exibição";
 			// 
-			// btnPesquisa
-			// 
-			this.btnPesquisa.Location = new System.Drawing.Point(6, 119);
-			this.btnPesquisa.Name = "btnPesquisa";
-			this.btnPesquisa.Size = new System.Drawing.Size(75, 23);
-			this.btnPesquisa.TabIndex = 3;
-			this.btnPesquisa.Text = "Pesquisar";
-			this.btnPesquisa.UseVisualStyleBackColor = true;
-			this.btnPesquisa.Click += new System.EventHandler(this.btnPesquisa_Click);
-			// 
 			// txtPesquisa
 			// 
 			this.txtPesquisa.Location = new System.Drawing.Point(59, 75);
@@ -214,7 +194,7 @@
 			this.grbModificar.Controls.Add(this.btnAlterar);
 			this.grbModificar.Location = new System.Drawing.Point(313, 345);
 			this.grbModificar.Name = "grbModificar";
-			this.grbModificar.Size = new System.Drawing.Size(389, 148);
+			this.grbModificar.Size = new System.Drawing.Size(379, 148);
 			this.grbModificar.TabIndex = 3;
 			this.grbModificar.TabStop = false;
 			this.grbModificar.Text = "Modificar";
@@ -266,38 +246,8 @@
 			// 
 			this.txtID.Location = new System.Drawing.Point(52, 21);
 			this.txtID.Name = "txtID";
-			this.txtID.Size = new System.Drawing.Size(100, 20);
+			this.txtID.Size = new System.Drawing.Size(90, 20);
 			this.txtID.TabIndex = 2;
-			// 
-			// btnExcluir
-			// 
-			this.btnExcluir.Location = new System.Drawing.Point(158, 19);
-			this.btnExcluir.Name = "btnExcluir";
-			this.btnExcluir.Size = new System.Drawing.Size(75, 23);
-			this.btnExcluir.TabIndex = 1;
-			this.btnExcluir.Text = "Excluir";
-			this.btnExcluir.UseVisualStyleBackColor = true;
-			this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
-			// 
-			// btnAlterar
-			// 
-			this.btnAlterar.Location = new System.Drawing.Point(6, 119);
-			this.btnAlterar.Name = "btnAlterar";
-			this.btnAlterar.Size = new System.Drawing.Size(75, 23);
-			this.btnAlterar.TabIndex = 0;
-			this.btnAlterar.Text = "Alterar";
-			this.btnAlterar.UseVisualStyleBackColor = true;
-			this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
-			// 
-			// btnFechar
-			// 
-			this.btnFechar.Location = new System.Drawing.Point(708, 470);
-			this.btnFechar.Name = "btnFechar";
-			this.btnFechar.Size = new System.Drawing.Size(75, 23);
-			this.btnFechar.TabIndex = 4;
-			this.btnFechar.Text = "Fechar";
-			this.btnFechar.UseVisualStyleBackColor = true;
-			this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
 			// 
 			// label7
 			// 
@@ -308,6 +258,62 @@
 			this.label7.Size = new System.Drawing.Size(130, 17);
 			this.label7.TabIndex = 10;
 			this.label7.Text = "Consulta de Alunos";
+			// 
+			// btnFechar
+			// 
+			this.btnFechar.BackgroundImage = global::TCM.Properties.Resources.FECHAR_1;
+			this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.btnFechar.Location = new System.Drawing.Point(698, 462);
+			this.btnFechar.Name = "btnFechar";
+			this.btnFechar.Size = new System.Drawing.Size(85, 31);
+			this.btnFechar.TabIndex = 4;
+			this.btnFechar.UseVisualStyleBackColor = true;
+			this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+			// 
+			// btnExcluir
+			// 
+			this.btnExcluir.BackgroundImage = global::TCM.Properties.Resources.EXCLUIR_1;
+			this.btnExcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.btnExcluir.Location = new System.Drawing.Point(148, 13);
+			this.btnExcluir.Name = "btnExcluir";
+			this.btnExcluir.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+			this.btnExcluir.Size = new System.Drawing.Size(85, 31);
+			this.btnExcluir.TabIndex = 1;
+			this.btnExcluir.UseVisualStyleBackColor = true;
+			this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+			// 
+			// btnAlterar
+			// 
+			this.btnAlterar.BackgroundImage = global::TCM.Properties.Resources.ALTERAR_1;
+			this.btnAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.btnAlterar.Location = new System.Drawing.Point(6, 111);
+			this.btnAlterar.Name = "btnAlterar";
+			this.btnAlterar.Size = new System.Drawing.Size(85, 31);
+			this.btnAlterar.TabIndex = 0;
+			this.btnAlterar.UseVisualStyleBackColor = true;
+			this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+			// 
+			// btnPesquisa
+			// 
+			this.btnPesquisa.BackgroundImage = global::TCM.Properties.Resources.PESQUISAR_1;
+			this.btnPesquisa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.btnPesquisa.Location = new System.Drawing.Point(6, 111);
+			this.btnPesquisa.Name = "btnPesquisa";
+			this.btnPesquisa.Size = new System.Drawing.Size(85, 31);
+			this.btnPesquisa.TabIndex = 3;
+			this.btnPesquisa.UseVisualStyleBackColor = true;
+			this.btnPesquisa.Click += new System.EventHandler(this.btnPesquisa_Click);
+			// 
+			// btnExibir
+			// 
+			this.btnExibir.BackgroundImage = global::TCM.Properties.Resources.EXIBIR_1;
+			this.btnExibir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.btnExibir.Location = new System.Drawing.Point(7, 111);
+			this.btnExibir.Name = "btnExibir";
+			this.btnExibir.Size = new System.Drawing.Size(85, 31);
+			this.btnExibir.TabIndex = 3;
+			this.btnExibir.UseVisualStyleBackColor = true;
+			this.btnExibir.Click += new System.EventHandler(this.btnExibir_Click);
 			// 
 			// FrmConsultaAluno
 			// 

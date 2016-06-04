@@ -32,7 +32,6 @@
 			this.grbPesquisar = new System.Windows.Forms.GroupBox();
 			this.label10 = new System.Windows.Forms.Label();
 			this.cmbTabela = new System.Windows.Forms.ComboBox();
-			this.btnPesquisar = new System.Windows.Forms.Button();
 			this.label2 = new System.Windows.Forms.Label();
 			this.txtValor = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
@@ -42,17 +41,18 @@
 			this.label4 = new System.Windows.Forms.Label();
 			this.dgvAtiv = new System.Windows.Forms.DataGridView();
 			this.grbAdicionar = new System.Windows.Forms.GroupBox();
+			this.txtNota = new System.Windows.Forms.TextBox();
 			this.label11 = new System.Windows.Forms.Label();
-			this.btnAdicionar = new System.Windows.Forms.Button();
 			this.label9 = new System.Windows.Forms.Label();
 			this.label8 = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
 			this.txtIDAtiv = new System.Windows.Forms.TextBox();
 			this.label6 = new System.Windows.Forms.Label();
 			this.txtIDAluno = new System.Windows.Forms.TextBox();
-			this.btnFechar = new System.Windows.Forms.Button();
 			this.label5 = new System.Windows.Forms.Label();
-			this.txtNota = new System.Windows.Forms.TextBox();
+			this.btnFechar = new System.Windows.Forms.Button();
+			this.btnAdicionar = new System.Windows.Forms.Button();
+			this.btnPesquisar = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dgvNotas)).BeginInit();
 			this.grbPesquisar.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvAluno)).BeginInit();
@@ -79,7 +79,7 @@
 			this.grbPesquisar.Controls.Add(this.cmbCampo);
 			this.grbPesquisar.Location = new System.Drawing.Point(327, 31);
 			this.grbPesquisar.Name = "grbPesquisar";
-			this.grbPesquisar.Size = new System.Drawing.Size(188, 132);
+			this.grbPesquisar.Size = new System.Drawing.Size(188, 139);
 			this.grbPesquisar.TabIndex = 2;
 			this.grbPesquisar.TabStop = false;
 			this.grbPesquisar.Text = "Pesquisar";
@@ -102,16 +102,6 @@
 			this.cmbTabela.Size = new System.Drawing.Size(121, 21);
 			this.cmbTabela.TabIndex = 5;
 			this.cmbTabela.SelectedIndexChanged += new System.EventHandler(this.cmbTabela_SelectedIndexChanged);
-			// 
-			// btnPesquisar
-			// 
-			this.btnPesquisar.Location = new System.Drawing.Point(6, 101);
-			this.btnPesquisar.Name = "btnPesquisar";
-			this.btnPesquisar.Size = new System.Drawing.Size(75, 23);
-			this.btnPesquisar.TabIndex = 4;
-			this.btnPesquisar.Text = "Pesquisar";
-			this.btnPesquisar.UseVisualStyleBackColor = true;
-			this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
 			// 
 			// label2
 			// 
@@ -150,16 +140,16 @@
 			// dgvAluno
 			// 
 			this.dgvAluno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgvAluno.Location = new System.Drawing.Point(327, 182);
+			this.dgvAluno.Location = new System.Drawing.Point(327, 189);
 			this.dgvAluno.Name = "dgvAluno";
-			this.dgvAluno.Size = new System.Drawing.Size(188, 311);
+			this.dgvAluno.Size = new System.Drawing.Size(188, 304);
 			this.dgvAluno.TabIndex = 3;
 			this.dgvAluno.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAluno_CellClick);
 			// 
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(327, 166);
+			this.label3.Location = new System.Drawing.Point(327, 173);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(39, 13);
 			this.label3.TabIndex = 4;
@@ -196,10 +186,17 @@
 			this.grbAdicionar.Controls.Add(this.txtIDAluno);
 			this.grbAdicionar.Location = new System.Drawing.Point(521, 232);
 			this.grbAdicionar.Name = "grbAdicionar";
-			this.grbAdicionar.Size = new System.Drawing.Size(262, 232);
+			this.grbAdicionar.Size = new System.Drawing.Size(262, 224);
 			this.grbAdicionar.TabIndex = 7;
 			this.grbAdicionar.TabStop = false;
 			this.grbAdicionar.Text = "Atribuir";
+			// 
+			// txtNota
+			// 
+			this.txtNota.Location = new System.Drawing.Point(76, 108);
+			this.txtNota.Name = "txtNota";
+			this.txtNota.Size = new System.Drawing.Size(29, 20);
+			this.txtNota.TabIndex = 11;
 			// 
 			// label11
 			// 
@@ -209,16 +206,6 @@
 			this.label11.Size = new System.Drawing.Size(72, 13);
 			this.label11.TabIndex = 10;
 			this.label11.Text = "Formato:    00";
-			// 
-			// btnAdicionar
-			// 
-			this.btnAdicionar.Location = new System.Drawing.Point(7, 203);
-			this.btnAdicionar.Name = "btnAdicionar";
-			this.btnAdicionar.Size = new System.Drawing.Size(75, 23);
-			this.btnAdicionar.TabIndex = 8;
-			this.btnAdicionar.Text = "Adicionar";
-			this.btnAdicionar.UseVisualStyleBackColor = true;
-			this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
 			// 
 			// label9
 			// 
@@ -269,16 +256,6 @@
 			this.txtIDAluno.Size = new System.Drawing.Size(135, 20);
 			this.txtIDAluno.TabIndex = 0;
 			// 
-			// btnFechar
-			// 
-			this.btnFechar.Location = new System.Drawing.Point(708, 470);
-			this.btnFechar.Name = "btnFechar";
-			this.btnFechar.Size = new System.Drawing.Size(75, 23);
-			this.btnFechar.TabIndex = 8;
-			this.btnFechar.Text = "Fechar";
-			this.btnFechar.UseVisualStyleBackColor = true;
-			this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
-			// 
 			// label5
 			// 
 			this.label5.AutoSize = true;
@@ -289,12 +266,38 @@
 			this.label5.TabIndex = 9;
 			this.label5.Text = "Notas";
 			// 
-			// txtNota
+			// btnFechar
 			// 
-			this.txtNota.Location = new System.Drawing.Point(76, 108);
-			this.txtNota.Name = "txtNota";
-			this.txtNota.Size = new System.Drawing.Size(29, 20);
-			this.txtNota.TabIndex = 11;
+			this.btnFechar.BackgroundImage = global::TCM.Properties.Resources.FECHAR_1;
+			this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.btnFechar.Location = new System.Drawing.Point(698, 462);
+			this.btnFechar.Name = "btnFechar";
+			this.btnFechar.Size = new System.Drawing.Size(85, 31);
+			this.btnFechar.TabIndex = 8;
+			this.btnFechar.UseVisualStyleBackColor = true;
+			this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+			// 
+			// btnAdicionar
+			// 
+			this.btnAdicionar.BackgroundImage = global::TCM.Properties.Resources.ADICIONAR_1;
+			this.btnAdicionar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.btnAdicionar.Location = new System.Drawing.Point(6, 187);
+			this.btnAdicionar.Name = "btnAdicionar";
+			this.btnAdicionar.Size = new System.Drawing.Size(85, 31);
+			this.btnAdicionar.TabIndex = 8;
+			this.btnAdicionar.UseVisualStyleBackColor = true;
+			this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
+			// 
+			// btnPesquisar
+			// 
+			this.btnPesquisar.BackgroundImage = global::TCM.Properties.Resources.PESQUISAR_1;
+			this.btnPesquisar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.btnPesquisar.Location = new System.Drawing.Point(6, 102);
+			this.btnPesquisar.Name = "btnPesquisar";
+			this.btnPesquisar.Size = new System.Drawing.Size(85, 31);
+			this.btnPesquisar.TabIndex = 4;
+			this.btnPesquisar.UseVisualStyleBackColor = true;
+			this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
 			// 
 			// FrmNotas
 			// 
