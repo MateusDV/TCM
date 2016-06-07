@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
 			this.label1 = new System.Windows.Forms.Label();
 			this.txtUser = new System.Windows.Forms.TextBox();
 			this.txtPass = new System.Windows.Forms.TextBox();
@@ -41,7 +42,7 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(183, 51);
+			this.label1.Location = new System.Drawing.Point(166, 53);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(32, 13);
 			this.label1.TabIndex = 0;
@@ -49,24 +50,24 @@
 			// 
 			// txtUser
 			// 
-			this.txtUser.Location = new System.Drawing.Point(218, 48);
+			this.txtUser.Location = new System.Drawing.Point(201, 50);
 			this.txtUser.Name = "txtUser";
-			this.txtUser.Size = new System.Drawing.Size(161, 20);
+			this.txtUser.Size = new System.Drawing.Size(148, 20);
 			this.txtUser.TabIndex = 1;
 			// 
 			// txtPass
 			// 
-			this.txtPass.Location = new System.Drawing.Point(218, 84);
+			this.txtPass.Location = new System.Drawing.Point(201, 86);
 			this.txtPass.Name = "txtPass";
 			this.txtPass.PasswordChar = '•';
-			this.txtPass.Size = new System.Drawing.Size(161, 20);
+			this.txtPass.Size = new System.Drawing.Size(148, 20);
 			this.txtPass.TabIndex = 3;
 			this.txtPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPass_KeyDown);
 			// 
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(177, 87);
+			this.label2.Location = new System.Drawing.Point(160, 89);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(38, 13);
 			this.label2.TabIndex = 2;
@@ -76,7 +77,7 @@
 			// 
 			this.btnCancel.BackgroundImage = global::TCM.Properties.Resources.CANCELAR_1;
 			this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.btnCancel.Location = new System.Drawing.Point(282, 120);
+			this.btnCancel.Location = new System.Drawing.Point(265, 122);
 			this.btnCancel.Name = "btnCancel";
 			this.btnCancel.Size = new System.Drawing.Size(108, 39);
 			this.btnCancel.TabIndex = 6;
@@ -87,7 +88,7 @@
 			// 
 			this.btnLogin.BackgroundImage = global::TCM.Properties.Resources.LOGIN_1;
 			this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.btnLogin.Location = new System.Drawing.Point(168, 120);
+			this.btnLogin.Location = new System.Drawing.Point(151, 122);
 			this.btnLogin.Name = "btnLogin";
 			this.btnLogin.Size = new System.Drawing.Size(108, 39);
 			this.btnLogin.TabIndex = 5;
@@ -97,7 +98,7 @@
 			// ptbLogo
 			// 
 			this.ptbLogo.Image = global::TCM.Properties.Resources.logo;
-			this.ptbLogo.Location = new System.Drawing.Point(12, 22);
+			this.ptbLogo.Location = new System.Drawing.Point(0, 22);
 			this.ptbLogo.Name = "ptbLogo";
 			this.ptbLogo.Size = new System.Drawing.Size(157, 157);
 			this.ptbLogo.TabIndex = 4;
@@ -107,7 +108,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(401, 202);
+			this.ClientSize = new System.Drawing.Size(390, 202);
 			this.Controls.Add(this.btnCancel);
 			this.Controls.Add(this.btnLogin);
 			this.Controls.Add(this.ptbLogo);
@@ -116,6 +117,7 @@
 			this.Controls.Add(this.txtUser);
 			this.Controls.Add(this.label1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.KeyPreview = true;
 			this.Name = "FrmLogin";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

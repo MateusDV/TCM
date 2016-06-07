@@ -24,8 +24,6 @@ namespace TCM
 			string nivel = comp.Nivel;
 			string nome = comp.Nome;
 
-			
-
 			if (nivel.Equals("gerente", StringComparison.InvariantCultureIgnoreCase))
 			{
 

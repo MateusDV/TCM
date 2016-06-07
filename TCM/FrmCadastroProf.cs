@@ -103,7 +103,7 @@ namespace TCM
 						ds = new DataSet();
 
 						string sql = String.Format("INSERT INTO PROFESSOR VALUES ('{0}','{1}','{2}','{3}','{4}',{5},'{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}')", nome, sexo, rg, cpf, rua, numero, bairro, cep, cidade, estado, fone, cel, email, senha);
-						MessageBox.Show(sql);
+						//MessageBox.Show(sql);
 						ds = conexao.executarSQL(sql);
 					}
 				}
