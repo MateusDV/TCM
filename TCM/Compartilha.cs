@@ -14,16 +14,10 @@ namespace TCM
 
 		public string Nivel
 		{
-			get
-			{
-				return nivel;
-			}
-
-			set
-			{
-				nivel = value;
-			}
+			get { return nivel; }
+			set	{ nivel = value; }
 		}
+		
 		public string Id
 		{
 			get

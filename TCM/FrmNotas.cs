@@ -16,122 +16,15 @@ namespace TCM
 		DataSet ds;
 		Compartilha comp = new Compartilha();
 
-		private String[] Tabela = {"Nota", "Aluno", "Atividade"};
-		private String[] Nota = {"Id_Aluno", "Aluno", "Atividade", "Valor"};
+		private String[] Tabela = { "Nota", "Aluno", "Atividade" };
+		private String[] Nota = { "Id_Aluno", "Aluno", "Atividade", "Valor" };
 		private String[] Aluno = { "Id_Aluno", "Nome" };
 		private String[] Atividade = { "ID_Ativ", "Nome", "Descricao" };
+        private String pdr = "SELECT TOP 0 0";
 
 		public FrmNotas()
 		{
 			InitializeComponent();
-		}
-
-		private void formataGrid_Nota()
-		{
-			//permite personalizar o grid
-			dgvNotas.AutoGenerateColumns = true;
-			dgvNotas.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
-			dgvNotas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
-			dgvNotas.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-			//altera a cor das linhas alternadas no grid
-			dgvNotas.RowsDefaultCellStyle.BackColor = Color.White;
-			dgvNotas.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
-			//ao clicar, seleciona a linha inteira
-			dgvNotas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-			//não permite seleção de multiplas linhas    
-			dgvNotas.MultiSelect = false;
-			//Expande a célula automáticamente
-			dgvNotas.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-			//read only
-			dgvNotas.ReadOnly = true;
-			dgvNotas.RowHeadersVisible = false;
-			dgvNotas.AllowUserToAddRows = false;
-		}
-
-		private void atualizar_grid_nota(String sql)
-		{
-			if (sql.Equals(null) || sql.Equals(""))
-			{
-				//placeholder
-				sql = "SELECT TOP 0 0";
-			}
-			conexao = new ClasseConexao();
-			ds = new DataSet();
-			ds = conexao.executarSQL(sql);
-			dgvNotas.DataSource = ds.Tables[0];
-			formataGrid_Nota();
-		}
-
-		private void formataGrid_Aluno()
-		{
-			//permite personalizar o grid
-			dgvAluno.AutoGenerateColumns = true;
-			dgvAluno.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
-			dgvAluno.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
-			dgvAluno.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-			//altera a cor das linhas alternadas no grid
-			dgvAluno.RowsDefaultCellStyle.BackColor = Color.White;
-			dgvAluno.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
-			//ao clicar, seleciona a linha inteira
-			dgvAluno.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-			//não permite seleção de multiplas linhas    
-			dgvAluno.MultiSelect = false;
-			//Expande a célula automáticamente
-			dgvAluno.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-			//read only
-			dgvAluno.ReadOnly = true;
-			dgvAluno.RowHeadersVisible = false;
-			dgvAluno.AllowUserToAddRows = false;
-		}
-
-		private void atualizar_grid_Aluno(String sql)
-		{
-			if (sql.Equals(null) || sql.Equals(""))
-			{
-				//placeholder
-				sql = "SELECT TOP 0 0";
-			}
-			conexao = new ClasseConexao();
-			ds = new DataSet();
-			ds = conexao.executarSQL(sql);
-			dgvAluno.DataSource = ds.Tables[0];
-			formataGrid_Aluno();
-		}
-
-		private void formataGrid_Ativ()
-		{
-			//permite personalizar o grid
-			dgvAtiv.AutoGenerateColumns = true;
-			dgvAtiv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
-			dgvAtiv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
-			dgvAtiv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-			//altera a cor das linhas alternadas no grid
-			dgvAtiv.RowsDefaultCellStyle.BackColor = Color.White;
-			dgvAtiv.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
-			//ao clicar, seleciona a linha inteira
-			dgvAtiv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-			//não permite seleção de multiplas linhas    
-			dgvAtiv.MultiSelect = false;
-			//Expande a célula automáticamente
-			dgvAtiv.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-			//read only
-			dgvAtiv.ReadOnly = true;
-			dgvAtiv.RowHeadersVisible = false;
-			dgvAtiv.AllowUserToAddRows = false;
-		}
-
-		private void atualizar_grid_Ativ(String sql)
-		{
-			if (sql.Equals(null) || sql.Equals(""))
-			{
-				//placeholder
-				sql = "SELECT TOP 0 0";
-			}
-			conexao = new ClasseConexao();
-			ds = new DataSet();
-			ds = conexao.executarSQL(sql);
-			dgvAtiv.DataSource = ds.Tables[0];
-			formataGrid_Ativ();
 		}
 
 		private void FrmNotas_Load(object sender, EventArgs e)
@@ -156,9 +49,9 @@ namespace TCM
 				grbAdicionar.Visible = false;
 			}
 
-			atualizar_grid_Aluno(SelAluno);
-			atualizar_grid_Ativ(SelAtiv);
-			atualizar_grid_nota(SelNota);
+            Grid.atualizar_grid(SelAluno, pdr, dgvAluno);
+            Grid.atualizar_grid(SelAtiv, pdr, dgvAtiv);
+            Grid.atualizar_grid(SelNota, pdr, dgvNotas);
 		}
 
 		private void btnPesquisar_Click(object sender, EventArgs e)
@@ -205,12 +98,12 @@ namespace TCM
 							query = String.Format("SELECT ALUNO.ID_ALUNO AS ID, ALUNO.NOME AS ALUNO, ATIVIDADE.NOME AS ATIVIDADE, NOTA.VALOR AS NOTA FROM ALUNO INNER JOIN NOTA ON ALUNO.ID_ALUNO = NOTA.ID_ALUNO INNER JOIN ATIVIDADE ON NOTA.ID_ATIV = ATIVIDADE.ID_ATIV WHERE NOTA.{0} LIKE '{1}%'", campo, valor);
 						}
 					}
-					atualizar_grid_nota(query);
+                    Grid.atualizar_grid(query, pdr, dgvNotas);
 				}
 				else if (tabela.Equals("Aluno"))
 				{
 					query = String.Format("SELECT ID_ALUNO AS ID, NOME FROM ALUNO WHERE {0} LIKE '{1}%'", campo, valor);
-					atualizar_grid_Aluno(query);
+                    Grid.atualizar_grid(query, pdr, dgvAluno);
 				}
 				else if (tabela.Equals("Atividade"))
 				{
@@ -222,7 +115,7 @@ namespace TCM
 					{
 						query = String.Format("SELECT ID_ATIV AS ID, NOME, DESCRICAO FROM ATIVIDADE WHERE {0} LIKE '{1}%'", campo, valor);
 					}
-					atualizar_grid_Ativ(query);
+                    Grid.atualizar_grid(query, pdr, dgvAtiv);
 				}
 				else
 				{
@@ -314,7 +207,7 @@ namespace TCM
 							ds = conexao.executarSQL(query);
 
 							String att = String.Format("SELECT ALUNO.ID_ALUNO AS ID, ALUNO.NOME AS ALUNO, ATIVIDADE.NOME AS ATIVIDADE, NOTA.VALOR AS NOTA FROM ALUNO INNER JOIN NOTA ON ALUNO.ID_ALUNO = NOTA.ID_ALUNO INNER JOIN ATIVIDADE ON NOTA.ID_ATIV = ATIVIDADE.ID_ATIV WHERE ATIVIDADE.ID_PROFESSOR = '{0}'", comp.Id);
-							atualizar_grid_nota(att);
+                            Grid.atualizar_grid(att, pdr, dgvNotas);
 						}
 						else
 						{
@@ -322,8 +215,6 @@ namespace TCM
 						}
 					}
 				}
-
-
 			}
 			catch(Exception erro) { }
 		}

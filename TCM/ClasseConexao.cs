@@ -16,10 +16,8 @@ namespace TCM
         {
             try
             {
-                //String strConexao = String.Format("Password=12345; Persist Security Info=True; User ID=sa; Initial Catalog=AALVES; Data Source={0}", Environment.MachineName);
-
-                String user = "sa";
-                String pass = "12345";
+                String user = "aluno";
+                String pass = "etesp";
                 String banco = "AALVES";
                 String maquina = Environment.MachineName;
 

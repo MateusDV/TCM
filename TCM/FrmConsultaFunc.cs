@@ -19,46 +19,11 @@ namespace TCM
 		private String[] Con = { "ID_FUNCIONARIO", "NOME", "EMAIL", "TELEFONE" };
 		private String[] End = { "ID_FUNCIONARIO", "NOME", "RUA", "NUM", "CEP", "CIDADE", "ESTADO" };
 		private String[] Fun = { "NOME", "SEXO", "RG", "CPF", "CARGO", "RUA", "NUM", "BAIRRO", "CEP", "CIDADE", "ESTADO", "TELEFONE", "CELULAR", "EMAIL" };
+        private String pdr = "SELECT TOP 0 0";
 
 		public FrmConsultaFunc()
 		{
 			InitializeComponent();
-		}
-
-		private void formataGrid()
-		{
-			//permite personalizar o grid
-			dgvFunc.AutoGenerateColumns = true;
-			dgvFunc.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
-			dgvFunc.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
-			dgvFunc.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-			//altera a cor das linhas alternadas no grid
-			dgvFunc.RowsDefaultCellStyle.BackColor = Color.White;
-			dgvFunc.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
-			//ao clicar, seleciona a linha inteira
-			dgvFunc.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-			//não permite seleção de multiplas linhas    
-			dgvFunc.MultiSelect = false;
-			//Expande a célula automáticamente
-			dgvFunc.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-			//read only
-			dgvFunc.ReadOnly = true;
-			dgvFunc.RowHeadersVisible = false;
-			dgvFunc.AllowUserToAddRows = false;
-		}
-
-		private void atualizar_grid(String sql)
-		{
-			if (sql.Equals(null) || sql.Equals(""))
-			{
-				//placeholder
-				sql = "SELECT TOP 0 0";
-			}
-			conexao = new ClasseConexao();
-			ds = new DataSet();
-			ds = conexao.executarSQL(sql);
-			dgvFunc.DataSource = ds.Tables[0];
-			formataGrid();
 		}
 
 		private void FrmConsultaFunc_Load(object sender, EventArgs e)
@@ -79,7 +44,7 @@ namespace TCM
 				grbModificar.Visible = false;
 			}
 
-			atualizar_grid("");
+			Grid.atualizar_grid("", pdr, dgvFunc);
 
 			cmbExibe.Items.Add("Pessoais");
 			cmbExibe.Items.Add("Contato");
@@ -108,7 +73,7 @@ namespace TCM
 				query = "";
 				MessageBox.Show("Por favor selecione um modo de exibição.");
 			}
-			atualizar_grid(query);
+            Grid.atualizar_grid(query, pdr, dgvFunc);
 		}
 
 		private void cmbExibe_SelectedIndexChanged(object sender, EventArgs e)
@@ -162,7 +127,7 @@ namespace TCM
 					query = "";
 					MessageBox.Show("Por favor selecione um modo de exibição");
 				}
-				atualizar_grid(query);
+                Grid.atualizar_grid(query, pdr, dgvFunc);
 			}
 			catch (Exception erro) { }
 		}

@@ -19,65 +19,22 @@ namespace TCM
 		private String[] Con = { "ID_ALUNO", "NOME", "EMAIL", "TELEFONE" };
 		private String[] End = { "ID_ALUNO", "NOME", "RUA", "NUM", "CEP", "CIDADE", "ESTADO" };
 		private String[] Aln = { "NOME", "EMAIL", "SEXO", "RUA", "NUM", "CEP", "CIDADE", "ESTADO", "TELEFONE", "CURSO", "PERIODO" };
-
-		public String[] getPes() { return Pes; }
-		public String[] getCon() { return Con; }
-		public String[] getEnd() { return End; }
-		public String[] getAln() { return Aln; }
+        private String pdr = "SELECT TOP 0 0";
 
 		public FrmConsultaAluno()
 		{
 			InitializeComponent();
 		}
 
-		private void formataGrid()
-		{
-			//permite personalizar o grid
-			dgvAluno.AutoGenerateColumns = true;
-			dgvAluno.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
-			dgvAluno.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
-			dgvAluno.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-			//altera a cor das linhas alternadas no grid
-			dgvAluno.RowsDefaultCellStyle.BackColor = Color.White;
-			dgvAluno.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
-			//ao clicar, seleciona a linha inteira
-			dgvAluno.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-			//não permite seleção de multiplas linhas    
-			dgvAluno.MultiSelect = false;
-			// exibe vazio no lugar de null
-			//dgvAluno.DefaultCellStyle.NullValue = "";
-			//Expande a célula automáticamente
-			dgvAluno.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-			//alinha à direita os campos moeda
-			//grid.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-			dgvAluno.ReadOnly = true;
-			dgvAluno.RowHeadersVisible = false;
-			dgvAluno.AllowUserToAddRows = false;
-		}
-
-		private void atualizar_grid(String sql)
-		{
-			if (sql.Equals(null) || sql.Equals(""))
-			{
-				//placeholder
-				sql = "SELECT TOP 0 0";
-			}
-			conexao = new ClasseConexao();
-			ds = new DataSet();
-			ds = conexao.executarSQL(sql);
-			dgvAluno.DataSource = ds.Tables[0];
-			formataGrid();
-		}
-
 		private void FrmConsultaAluno_Load(object sender, EventArgs e)
 		{
-			atualizar_grid("");
+			Grid.atualizar_grid("", pdr, dgvAluno);
 
 			cmbExibe.Items.Add("Pessoais");
 			cmbExibe.Items.Add("Contato");
 			cmbExibe.Items.Add("Endereço");
 
-			cmbAltCampo.Items.AddRange(getAln());
+			cmbAltCampo.Items.AddRange(Aln);
 		}
 
 		private void btnExibir_Click(object sender, EventArgs e)
@@ -100,7 +57,7 @@ namespace TCM
 				query = "";
 				MessageBox.Show("Por favor selecione um modo de exibição.");
 			}
-			atualizar_grid(query);
+			Grid.atualizar_grid(query, pdr, dgvAluno);
 		}
 
 		private void cmbExibe_SelectedIndexChanged(object sender, EventArgs e)
@@ -108,17 +65,17 @@ namespace TCM
 			if (cmbExibe.SelectedItem.Equals("Pessoais"))
 			{
 				cmbCampo.Items.Clear();
-				cmbCampo.Items.AddRange(getPes());
+				cmbCampo.Items.AddRange(Pes);
 			}
 			else if (cmbExibe.SelectedItem.Equals("Contato"))
 			{
 				cmbCampo.Items.Clear();
-				cmbCampo.Items.AddRange(getCon());
+				cmbCampo.Items.AddRange(Con);
 			}
 			else if (cmbExibe.SelectedItem.Equals("Endereço"))
 			{
 				cmbCampo.Items.Clear();
-				cmbCampo.Items.AddRange(getEnd());
+				cmbCampo.Items.AddRange(End);
 			}
 			else
 			{
@@ -165,7 +122,7 @@ namespace TCM
 					query = "";
 					MessageBox.Show("Por favor selecione um modo de exibição");
 				}
-				atualizar_grid(query);
+                Grid.atualizar_grid(query, pdr, dgvAluno);
 			}
 			catch (Exception erro) { }
 		}
@@ -187,20 +144,26 @@ namespace TCM
 						valor = "1";
 						IsValido = true;
 					}
-					else if (valor.ToUpper().Equals("COMPLETO"))
+					else if (valor.ToUpper().Equals("INTERMEDIARIO"))
 					{
 						valor = "2";
 						IsValido = true;
 					}
-					else if (valor.ToUpper().Equals("EXPRESSO"))
+					else if (valor.ToUpper().Equals("AVANCADO"))
 					{
 						valor = "3";
 						IsValido = true;
 					}
-					else
+					else if(valor.ToUpper().Equals("EXPRESSO"))
 					{
-						IsValido = false;
+                        valor = "4";
+						IsValido = true;
 					}
+                    else
+                    {
+                        IsValido = false;
+                    }
+
 					query = String.Format("UPDATE ALUNO SET ID_CURSO = '{0}' WHERE ID_ALUNO = '{1}'", valor, ID);
 				}
 				else if (campo.Equals("PERIODO"))

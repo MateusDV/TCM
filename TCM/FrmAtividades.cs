@@ -17,49 +17,14 @@ namespace TCM
 
 		Compartilha comp = new Compartilha();
 
-		protected String[] ativ = { "ID_ATIV", "NOME", "DESCRICAO", "ID_PROFESSOR" };
+		private String[] ativ = { "ID_ATIV", "NOME", "DESCRICAO", "ID_PROFESSOR" };
+        private String pdr = "SELECT * FROM ATIVIDADE";
 
 		public FrmAtividades()
 		{
 			InitializeComponent();
 		}
-
-		private void formataGrid()
-		{
-			//permite personalizar o grid
-			dgvAtiv.AutoGenerateColumns = true;
-			dgvAtiv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
-			dgvAtiv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
-			dgvAtiv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-			//altera a cor das linhas alternadas no grid
-			dgvAtiv.RowsDefaultCellStyle.BackColor = Color.White;
-			dgvAtiv.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
-			//ao clicar, seleciona a linha inteira
-			dgvAtiv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-			//não permite seleção de multiplas linhas    
-			dgvAtiv.MultiSelect = false;
-			//Expande a célula automáticamente
-			dgvAtiv.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-			//read only
-			dgvAtiv.ReadOnly = true;
-			dgvAtiv.RowHeadersVisible = false;
-			dgvAtiv.AllowUserToAddRows = false;
-		}
-
-		private void atualizar_grid(String sql)
-		{
-			if (sql.Equals(null) || sql.Equals(""))
-			{
-				//placeholder
-				sql = "SELECT TOP 0 0";
-			}
-			conexao = new ClasseConexao();
-			ds = new DataSet();
-			ds = conexao.executarSQL(sql);
-			dgvAtiv.DataSource = ds.Tables[0];
-			formataGrid();
-		}
-
+        
 		private void FrmAtividades_Load(object sender, EventArgs e)
 		{
 			String nivel = comp.Nivel;
@@ -72,8 +37,8 @@ namespace TCM
 			}
 			else if (nivel.Equals("professor", StringComparison.InvariantCultureIgnoreCase))
 			{
-
-			}
+                this.pdr = String.Format("SELECT * FROM ATIVIDADE WHERE ID_PROFESSOR='{0}'", id);
+            }
 			else
 			{
 				grbCriar.Visible = false;
@@ -113,7 +78,7 @@ namespace TCM
 			String valor = txtValor.Text;
 			String query = String.Format("SELECT * FROM ATIVIDADE WHERE {0} LIKE '{1}%'", campo, valor);
 
-			atualizar_grid(query);
+            Grid.atualizar_grid(query, pdr, dgvAtiv);
 		}
 
 		private void textBox2_TextChanged(object sender, EventArgs e)
@@ -156,8 +121,7 @@ namespace TCM
 
 					ds = conexao.executarSQL(query);
 
-					String atl = String.Format("SELECT * FROM ATIVIDADE WHERE ID_PROFESSOR = '{0}'", id);
-					atualizar_grid(atl);
+                    Grid.atualizar_grid("", pdr, dgvAtiv);
 				}
 			}
 		}
@@ -199,8 +163,7 @@ namespace TCM
 							//MessageBox.Show(query);
 							ds = conexao.executarSQL(query);
 
-							String atl = String.Format("SELECT * FROM ATIVIDADE WHERE ID_PROFESSOR = '{0}'", comp.Id);
-							atualizar_grid(atl);
+							Grid.atualizar_grid("", pdr, dgvAtiv);
 						}
 						else
 						{
@@ -252,8 +215,7 @@ namespace TCM
 						//MessageBox.Show(query);
 						ds = conexao.executarSQL(query);
 
-						String atl = String.Format("SELECT * FROM ATIVIDADE WHERE ID_PROFESSOR = '{0}'", comp.Id);
-						atualizar_grid(atl);
+						Grid.atualizar_grid("", pdr, dgvAtiv);
 					}
 					else
 					{
